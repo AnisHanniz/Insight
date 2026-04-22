@@ -1,5 +1,16 @@
 node_modules
+.next
+out
+*.tsbuildinfo
+
 # Keep environment variables out of version control
 .env
+.env.local
+.env*.local
 
 /src/generated/prisma
+
+# Postgres data dir created by docker-compose
+/data
+
+.DS_Store
