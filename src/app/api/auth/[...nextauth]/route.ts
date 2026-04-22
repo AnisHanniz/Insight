@@ -4,11 +4,13 @@ import type { NextRequest } from 'next/server'
 import GoogleProvider from "next-auth/providers/google";
 import { authOptions } from "@/lib/auth";
 
+// Force this route to be dynamic, preventing build-time errors when DB is not available
+export const dynamic = 'force-dynamic'
+
 async function handler(
   req: NextRequest,
   res: any
 ) {
-  // Dynamic provider setup to avoid build-time issues with Request object
   const providers = [...authOptions.providers];
 
   if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
