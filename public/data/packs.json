@@ -1,0 +1,286 @@
+[
+  {
+    "id": "1",
+    "name": "Training & Preparation",
+    "theme": "training",
+    "subtitle": "Build the routine that wins before the match starts",
+    "description": "Aim routines, decision review, studying demos as an individual and as a team. Learn what to practice, how often, and what to look for when watching your own demos or players with your role.",
+    "tier": 1,
+    "difficulty": "beginner",
+    "scenarios": 3,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "t1-1",
+      "t1-2",
+      "t1-3"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Mechanical Skills",
+    "theme": "mechanical",
+    "subtitle": "Crosshair, movement, utility — the raw fundamentals",
+    "description": "Crosshair placement, sensitivity, spray control, shoulder peeks, wide peeks and utility lineups. The mechanics you need to execute your read.",
+    "tier": 1,
+    "difficulty": "beginner",
+    "scenarios": 3,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "m1-1",
+      "m1-2",
+      "m1-3"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Game Knowledge",
+    "theme": "knowledge",
+    "subtitle": "META, strategies, tricks and money management",
+    "description": "How to read META shifts, adjust strategies mid-match, pick smart tricks (positions, utilities) and manage your own, your team's, and the opponent's economy.",
+    "tier": 2,
+    "difficulty": "intermediate",
+    "scenarios": 3,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "k1-1",
+      "k1-2",
+      "k1-3"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Communication",
+    "theme": "communication",
+    "subtitle": "Tone, information density, calls that don't waste",
+    "description": "What to cover, what you see, what you do — and how tone changes the round. Dense comms, clean callouts, and the discipline to shut up when it matters.",
+    "tier": 2,
+    "difficulty": "intermediate",
+    "scenarios": 3,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "c1-1",
+      "c1-2",
+      "c1-3"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Teamplay",
+    "theme": "teamplay",
+    "subtitle": "Crossfires, trading, spontaneous organization",
+    "description": "Work as a unit: crossfires, trading the entry, spontaneous reorganization after a bad split, and the work ethic that keeps a team coherent.",
+    "tier": 2,
+    "difficulty": "intermediate",
+    "scenarios": 3,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "tp1-1",
+      "tp1-2",
+      "tp1-3"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Attitude",
+    "theme": "attitude",
+    "subtitle": "Individual energy, team-grade behavior",
+    "description": "Promote positive energy, refrain from spilling frustration, and be the teammate that lifts a losing half instead of sinking it.",
+    "tier": 3,
+    "difficulty": "advanced",
+    "scenarios": 3,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "a1-1",
+      "a1-2",
+      "a1-3"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Mental Fortitude",
+    "theme": "mental",
+    "subtitle": "Focus when easy, 100% in losses, reset between rounds",
+    "description": "Stay focused when it's going well, keep playing at 100% when losing, and reset your head between rounds and maps — the hardest habits to train.",
+    "tier": 3,
+    "difficulty": "advanced",
+    "scenarios": 3,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "mf1-1",
+      "mf1-2",
+      "mf1-3"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Decision Making",
+    "theme": "decision",
+    "subtitle": "Powerplay, clutches, positioning, reading opponents",
+    "description": "The moments the round actually swings on: when to powerplay, how to clutch, positioning to read the map, and reading opponents off tempo and economy.",
+    "tier": 3,
+    "difficulty": "advanced",
+    "scenarios": 3,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "d1-1",
+      "d1-2",
+      "d1-3"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "CT Side — Team Protocol",
+    "theme": "decision",
+    "subtitle": "5v5 playbook: XvY reads, overotate, timeline, gameplan",
+    "description": "Team-grade CT protocol: one plan every round, XvY reactions (5v4, 4v5, 3v5), overotate triggers, economy cycle, stuff allocation, timeline 1:55 → setup BP, and gameplan reads against slow / pressure / stack styles.",
+    "tier": 1,
+    "difficulty": "advanced",
+    "scenarios": 5,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "ct-1",
+      "ct-2",
+      "ct-3",
+      "ct-4",
+      "ct-5"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "T Side — Team Protocol",
+    "theme": "decision",
+    "subtitle": "Classique, zones neutres, finitions BP, afterplant",
+    "description": "Team-grade T protocol: default classiques (3-1-1, 2-2-1), neutral zones, BP finishers (Limace / Explo / CIS), smoke reserves for late round, afterplant triangles, anti-eco rigor and reading CT overotate to fake.",
+    "tier": 1,
+    "difficulty": "advanced",
+    "scenarios": 5,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "tside-1",
+      "tside-2",
+      "tside-3",
+      "tside-4",
+      "tside-5"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Economy & Stuff Management",
+    "theme": "knowledge",
+    "subtitle": "Save / half / rebuy / forcebuy, molo-smoke-HE-flash split",
+    "description": "Buy decisions by weapons saved, forcebuy timing (one per map), AWP economy, exit kills, and stuff distribution: 3 molo early / 2 reac, 3 smoke early / 2 reac, 3 HE / 2 double-flash.",
+    "tier": 1,
+    "difficulty": "intermediate",
+    "scenarios": 4,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "eco-1",
+      "eco-2",
+      "eco-3",
+      "eco-4"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Team Callouts Protocol",
+    "theme": "communication",
+    "subtitle": "Numbers, name, details, deathcam, intensity",
+    "description": "Call structure: number of players, prénom, info details, deathcam, intensity. Freezetime drop requests with prénom. Retake comms: wait, kit check, priority utility, 40s window.",
+    "tier": 2,
+    "difficulty": "intermediate",
+    "scenarios": 3,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Mentality & Opponent Analysis",
+    "theme": "attitude",
+    "subtitle": "Trade mindset, stay loose, read their roles",
+    "description": "Solidarity under pressure, jokes as focus release, trade-mentality as team habit. Opponent reading by pseudo/role (extrémité A, pivot, snipe) and style tag (CIS / STACK / PRESSION). When blocked on a call — change zone, don't grind it.",
+    "tier": 2,
+    "difficulty": "advanced",
+    "scenarios": 4,
+    "price": "Free",
+    "imageUrl": "",
+    "scenarioIds": [
+      "ma-1",
+      "ma-2",
+      "ma-3",
+      "ma-4"
+    ]
+  },
+  {
+    "id": "iem-rio-2026",
+    "name": "IEM Rio 2026 — Decision Pack",
+    "theme": "decision",
+    "subtitle": "Key decision moments from IEM Rio 2026 grand final",
+    "description": "Tournament-grade pack built from real IEM Rio 2026 grand final rounds. Study the exact fork moments where tier-1 IGLs chose to overotate, fake, or reset — and what you would have done.",
+    "tier": 1,
+    "difficulty": "advanced",
+    "scenarios": 3,
+    "price": "$4.99",
+    "imageUrl": "/images/packs/iem-rio-2026.jpg",
+    "scenarioIds": [
+      "iem-rio-1",
+      "iem-rio-2",
+      "iem-rio-3"
+    ],
+    "tournament": "IEM Rio 2026",
+    "isPremium": true
+  },
+  {
+    "id": "pgl-major-2025",
+    "name": "PGL Major 2025 — Powerplay Pack",
+    "theme": "decision",
+    "subtitle": "Anti-eco decisions from the 2025 PGL Major group stage",
+    "description": "Premium pack focused on powerplay scenarios from the PGL Major 2025. How tier-1 teams denied eco pushes, set punition angles and managed the numerical advantage.",
+    "tier": 1,
+    "difficulty": "advanced",
+    "scenarios": 3,
+    "price": "$3.99",
+    "imageUrl": "/images/packs/pgl-major-2025.jpg",
+    "scenarioIds": [
+      "pgl-1",
+      "pgl-2",
+      "pgl-3"
+    ],
+    "tournament": "PGL Major 2025",
+    "isPremium": true
+  },
+  {
+    "id": "advanced-vision-1",
+    "name": "Advanced Game Vision",
+    "theme": "decision",
+    "subtitle": "Advanced game vision concepts, weak/strong side and map control.",
+    "description": "Learn how to cut the map in half, numerically identify the weak side, optimize defensive setups at the extremities, understand the advantage of open vs closed zones, and manage your alert and comfort zones.",
+    "tier": 2,
+    "difficulty": "advanced",
+    "scenarios": 5,
+    "price": "Free",
+    "imageUrl": "/images/packs/pgl-major-2025.jpg",
+    "scenarioIds": [
+      "adv-vision-s1",
+      "adv-vision-s2",
+      "adv-vision-s3",
+      "adv-vision-s4",
+      "adv-vision-s5"
+    ]
+  }
+]

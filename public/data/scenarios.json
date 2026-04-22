@@ -1,0 +1,2701 @@
+[
+  {
+    "id": "t1-1",
+    "packId": "1",
+    "theme": "training",
+    "subcategory": "Aim — Deathmatch & aim training",
+    "map": "Any",
+    "title": "45 minutes before a tier-1 scrim",
+    "description": "You have 45 minutes before a scheduled scrim. Your last official was 36 hours ago. You feel rusty on flick reaction but your movement and nades are fresh.",
+    "macro": {
+      "title": "Context",
+      "description": "Pre-match prep is about priming the skills that actually decayed since last session — not repeating what is already warm."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Short, targeted DM and aim-trainer routines beat long casual warmups. Stop before you get tired."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Tell the team what you are working on so the IGL can avoid stacking heavy comms duty on you in the first half."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "30 min aim_botz tracking + 10 min Headshot-only DM + 5 min hydration & breath.",
+        "quality": "perfect",
+        "feedback": "Targets the exact decayed skill (flicks), keeps volume low enough to not pre-fatigue, and leaves recovery time. Tournament pros do exactly this."
+      },
+      {
+        "id": 2,
+        "text": "Full 45 min FFA DM on a packed server.",
+        "quality": "good",
+        "feedback": "Warm, but unfocused. FFA rewards whoever shoots first rather than isolating the skill you actually want to sharpen."
+      },
+      {
+        "id": 3,
+        "text": "Play a ranked competitive match to 'get matches in'.",
+        "quality": "blunder",
+        "feedback": "Different economy, different pace, different teammates. You burn mental energy on a game that has nothing to do with the scrim plan."
+      },
+      {
+        "id": 4,
+        "text": "15 min aim_botz + 15 min retakes + 10 min nade lineups you already know.",
+        "quality": "excellent",
+        "feedback": "Good coverage but you re-practice known lineups instead of fixing the decayed flick reaction. Close to optimal."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "t1-2",
+    "packId": "1",
+    "theme": "training",
+    "subcategory": "Decisions — Watching own demos",
+    "map": "Any",
+    "title": "Reviewing the demo of the match you just lost 13-8",
+    "description": "You lost 13-8. You died 22 times. You have 40 minutes to review before the next map of the bo3.",
+    "macro": {
+      "title": "Context",
+      "description": "Demo review between maps isn't about re-watching every death — it's about extracting one or two actionable adjustments before the next map starts."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Filter by decision point, not kill/death. You lost rounds you lived in too — watch those."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Share findings as short callable adjustments, not long monologues."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Scrub through all 22 deaths at 2x to 'find the pattern'.",
+        "quality": "good",
+        "feedback": "You will spot patterns but you will also watch unimportant deaths and run out of time. Better to filter."
+      },
+      {
+        "id": 2,
+        "text": "Watch the 3 rounds you lost where you survived — identify wrong positioning or wrong rotation.",
+        "quality": "perfect",
+        "feedback": "Elite review. Rounds you lost while alive expose decision errors you can't blame on aim — and they're usually repeatable."
+      },
+      {
+        "id": 3,
+        "text": "Watch the enemy ADR leader's POV only.",
+        "quality": "excellent",
+        "feedback": "Great for reading their read, but you should also audit your own decisions. Combine both."
+      },
+      {
+        "id": 4,
+        "text": "Skip review, do aim_botz and mental reset.",
+        "quality": "blunder",
+        "feedback": "You are going into the next map with the same flawed reads. Aim won't save the wrong decisions."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "t1-3",
+    "packId": "1",
+    "theme": "training",
+    "subcategory": "Decisions — Studying other players in the same role",
+    "map": "Any",
+    "title": "You're the in-game leader learning a new map",
+    "description": "Your team is adding Ancient to the map pool. You have a week before the next match uses it. You IGL and set mid-round calls.",
+    "macro": {
+      "title": "Context",
+      "description": "Learning a map as IGL means stealing structure from teams whose style matches yours, then making it your own."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Watch 2-3 tier-1 teams that play a similar style, not a random sample. Note defaults, not highlights."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Turn what you steal into 3-4 named defaults the team can rehearse."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Watch 10 random Ancient demos across tier 1-3 to get a 'broad feel'.",
+        "quality": "blunder",
+        "feedback": "Too much noise. Different tiers play different games. You end up with nothing rehearsable."
+      },
+      {
+        "id": 2,
+        "text": "Watch 3 tier-1 teams with a style close to yours, extract their T-side default and one standard B execute.",
+        "quality": "perfect",
+        "feedback": "Textbook. Narrow, deliberate, copy structure not flair, and leave with callable defaults."
+      },
+      {
+        "id": 3,
+        "text": "Watch only your next opponent's Ancient demos.",
+        "quality": "good",
+        "feedback": "Useful for counter-strat but you still need your own structure first. Opponent study is step two."
+      },
+      {
+        "id": 4,
+        "text": "Have each teammate watch one role-matched player and report back.",
+        "quality": "excellent",
+        "feedback": "Scales well and builds ownership. Slightly weaker than centralized IGL extraction because team defaults can drift if nobody unifies the notes."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_ancient.png"
+  },
+  {
+    "id": "m1-1",
+    "packId": "2",
+    "theme": "mechanical",
+    "subcategory": "Aim — Crosshair placement",
+    "map": "Dust2",
+    "title": "CT holding Long from pit",
+    "description": "You are holding A long from pit on Dust2. The round just started. No info yet. Where do you park your crosshair while you hold angle?",
+    "macro": {
+      "title": "Context",
+      "description": "Crosshair placement is free aim: if your crosshair is already on the head-line, the enemy has to flick and you don't."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Head-level, at the deepest angle a runner would appear first — not on the floor, not on the sky."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "If your crosshair is wrong and you die, call the timing so the next holder adjusts."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Crosshair on the floor near blue barrels, ADS ready.",
+        "quality": "blunder",
+        "feedback": "You have to flick up and right to hit a head. That's the gift enemies want."
+      },
+      {
+        "id": 2,
+        "text": "Crosshair at head height, pre-aimed on the corner of long doors where a runner's head appears.",
+        "quality": "perfect",
+        "feedback": "Exactly the line of first contact. You don't move, they do."
+      },
+      {
+        "id": 3,
+        "text": "Crosshair on the sky above blue to cover a jump-peek.",
+        "quality": "good",
+        "feedback": "Covers one specific read but gives up the common flat peek. Only correct if you have info they jump."
+      },
+      {
+        "id": 4,
+        "text": "Crosshair at head height but aimed at the middle of long, not the corner.",
+        "quality": "excellent",
+        "feedback": "Height right, angle slightly late — enemies show from the corner first, you flick to them."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_dust2.png"
+  },
+  {
+    "id": "m1-2",
+    "packId": "2",
+    "theme": "mechanical",
+    "subcategory": "Aim — Spray control",
+    "map": "Mirage",
+    "title": "You spray an AK, 3 bullets hit — 4th through 8th go wide",
+    "description": "You are tapping fine at distance but mid-range sprays drop after bullet 3. You have the pattern memorized but under pressure the counter-pull falls apart.",
+    "macro": {
+      "title": "Context",
+      "description": "Spray control under pressure is a motor skill — memorizing the pattern isn't enough if your wrist overcorrects when your heart rate spikes."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Train spray at the intensity you play at. Calm aim_botz spray ≠ round-pressure spray."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "If you know your spray fails past bullet 3, call it and switch to controlled bursts for the next few rounds."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Do 20 min aim_botz recoil master every day until muscle memory is perfect.",
+        "quality": "good",
+        "feedback": "Builds the pattern but only under calm conditions. You still lose it under pressure."
+      },
+      {
+        "id": 2,
+        "text": "Train sprays in DM after losing rounds on purpose, so your heart rate is elevated.",
+        "quality": "perfect",
+        "feedback": "Pressure-adapted training. The skill you need is spray under stress, so train under stress."
+      },
+      {
+        "id": 3,
+        "text": "Switch to tapping past 20m and bursting 10-20m until the spray stabilizes.",
+        "quality": "excellent",
+        "feedback": "Smart interim fix. Play to current ability while training the weakness on the side."
+      },
+      {
+        "id": 4,
+        "text": "Buy an M4A1-S and avoid spraying.",
+        "quality": "blunder",
+        "feedback": "You are the T. You don't have an M4. Also avoidance doesn't fix the weakness."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_mirage.png"
+  },
+  {
+    "id": "m1-3",
+    "packId": "2",
+    "theme": "mechanical",
+    "subcategory": "Movement — Wide peek",
+    "map": "Inferno",
+    "title": "You need to wide-peek banana as T with AK",
+    "description": "CT has a Krieg holding banana from car. Your flash is popped but not great. You have AK, full kit. Teammate traded into sandbags.",
+    "macro": {
+      "title": "Context",
+      "description": "Wide peek sacrifices concealment for angle — it works when you know roughly where the enemy is and can beat them with a committed, fast arc."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Counter-strafe on the stop, crosshair pre-placed on their model's expected head height, no double tap on A/D."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Call 'peeking' so your teammate holds the trade angle from sandbags."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Shoulder-peek first, wait for the shot, then wide-peek.",
+        "quality": "excellent",
+        "feedback": "Baits the first bullet and confirms position. Costs tempo but reduces risk — good vs a locked AWP, slightly overkill vs a Krieg."
+      },
+      {
+        "id": 2,
+        "text": "Full wide peek, A-key held, crosshair at head height, counter-strafe at stop point.",
+        "quality": "perfect",
+        "feedback": "Classic high-commit AK wide peek. The Krieg loses the angle race when you hit your stop first."
+      },
+      {
+        "id": 3,
+        "text": "Slow walk out, crouched, to be quieter.",
+        "quality": "blunder",
+        "feedback": "Slow and crouched = dead. You are visible with zero speed advantage."
+      },
+      {
+        "id": 4,
+        "text": "Jump peek to gather info, then decide.",
+        "quality": "good",
+        "feedback": "Safe info but you told them you want banana. Now their teammate rotates."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_inferno.png"
+  },
+  {
+    "id": "k1-1",
+    "packId": "3",
+    "theme": "knowledge",
+    "subcategory": "META — Mid-match adjustment",
+    "map": "Nuke",
+    "title": "Enemy T side has B-rushed 3 rounds in a row and won all 3",
+    "description": "You are CT. The score is 4-7. They have quick B-rushed the last 3 rounds with different utility each time. Your B setup hasn't changed.",
+    "macro": {
+      "title": "Context",
+      "description": "When the opponent finds something that works, they will keep running it until you answer. Your job as CT is to break the pattern before it hits round 5."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Adjust the shape, not just who stands where — change the utility sequence or the trade angle so their rehearsed execute meets a new problem."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "One clear call, one clear change. Don't stack 3 adjustments at once or no one will execute any of them."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Stack 3 on B, leave 1 on A, no rotator.",
+        "quality": "blunder",
+        "feedback": "If they fake B and go A, you lose a free round and confirm they control the match. Overfitting."
+      },
+      {
+        "id": 2,
+        "text": "Add an aggressive secret peek with utility support, keep 2-1-2 base setup.",
+        "quality": "perfect",
+        "feedback": "Breaks the tempo of their rush by adding a pick before they're set. Cheap change, doesn't compromise A."
+      },
+      {
+        "id": 3,
+        "text": "Full 3-2 B stack with AWP in ramp, A anchor saves if needed.",
+        "quality": "excellent",
+        "feedback": "Strong read on B but commits hard. Works once — if they clock the stack and go A, it collapses."
+      },
+      {
+        "id": 4,
+        "text": "Don't change anything, trust your setup.",
+        "quality": "blunder",
+        "feedback": "Three rounds is not variance. Refusing to adapt is how halves end 4-11."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_nuke.png"
+  },
+  {
+    "id": "k1-2",
+    "packId": "3",
+    "theme": "knowledge",
+    "subcategory": "Money management — Team economy",
+    "map": "Any",
+    "title": "Round 13, you lose pistol and anti-eco",
+    "description": "CT side, 0-2. Each player has $1400-$2000. Enemy has full buy next round. IGL asks: buy call?",
+    "macro": {
+      "title": "Context",
+      "description": "Economy decisions are about round N+2, not round N+1. Spending now to maybe win one round often costs you the gun round after."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "If full-save gets the whole team to a certain full buy next round, it usually beats a coin-flip force."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Call it crisply. 'Full save, no drops, everyone stacks B pistol' — not five options debated mid-freezetime."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Full save, everyone with pistol, stack site and play for one pick.",
+        "quality": "perfect",
+        "feedback": "You guarantee a full buy at round 15 against their likely force. Highest EV play."
+      },
+      {
+        "id": 2,
+        "text": "Force buy — MP9s and armor, split pressure.",
+        "quality": "good",
+        "feedback": "Winnable but if you lose, you are broken for 2+ rounds. Only correct vs a team that forces hard after winning pistol."
+      },
+      {
+        "id": 3,
+        "text": "Half-buy: AWPer gets the AWP, rest go pistol + armor.",
+        "quality": "blunder",
+        "feedback": "If AWPer dies early, the AWP is dropped into enemy hands or saved and the round collapses. Asymmetric risk."
+      },
+      {
+        "id": 4,
+        "text": "Drop armor for 4 players, no guns, aggressive positions.",
+        "quality": "excellent",
+        "feedback": "Surprisingly viable vs a team that underestimates. Needs clear aggressive angles called. Slightly below full-save EV."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "k1-3",
+    "packId": "3",
+    "theme": "knowledge",
+    "subcategory": "Tricks — Utility position",
+    "map": "Mirage",
+    "title": "You want to smoke off CT spawn from T apartments",
+    "description": "T side Mirage, you want a one-way deep smoke to block CT rotation from CT spawn to B. You have not committed to B yet — you want the smoke to enable the option.",
+    "macro": {
+      "title": "Context",
+      "description": "Pre-commit utility is powerful when it works, dangerous when it telegraphs your intent."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Use a lineup that has multiple valid follow-ups so the smoke alone doesn't announce the execute."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Throwing early utility? Call the window so teammates know to fake A within N seconds."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Throw the CT smoke from apartments window and commit B immediately.",
+        "quality": "good",
+        "feedback": "Works, but telegraphs B. If opponent is half-awake they stack B the moment the smoke lands."
+      },
+      {
+        "id": 2,
+        "text": "Throw CT smoke from apartments, fake A with 2 players and nades for 15s, then collapse B.",
+        "quality": "perfect",
+        "feedback": "The smoke is ambiguous because your A fake forces rotation; B stays open. Highest EV at tier 1."
+      },
+      {
+        "id": 3,
+        "text": "Skip the CT smoke, go palace + ramp split.",
+        "quality": "excellent",
+        "feedback": "A valid different plan — but doesn't use the tool you already paid for. Good second option."
+      },
+      {
+        "id": 4,
+        "text": "Throw 3 smokes at CT spawn from mid to fully lock it, then B.",
+        "quality": "blunder",
+        "feedback": "Over-committing utility. You run out for the retake post-plant and the enemy AWPer from window still clips you."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_mirage.png"
+  },
+  {
+    "id": "c1-1",
+    "packId": "4",
+    "theme": "communication",
+    "subcategory": "Information — What you see",
+    "map": "Any",
+    "title": "You just died on A site, 1 kill, 2 enemies still alive there",
+    "description": "You're dead. Two teammates alive, one at B, one rotating from mid. You saw both enemies clearly before you died.",
+    "macro": {
+      "title": "Context",
+      "description": "Death comms are the highest-leverage comms in the game. Your teammate's next 5 seconds are shaped entirely by what you just said."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Numbers first, then positions, then utility, then intent. One breath."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Don't apologize, don't narrate your death, don't say 'I had him'. Just the info."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "'Two A, one default one site, full HP, no util used.'",
+        "quality": "perfect",
+        "feedback": "Number, positions, health, utility state. Four facts, one breath. Your teammates now play a near-perfect retake."
+      },
+      {
+        "id": 2,
+        "text": "'Damn I was so close! Two left on A, one near site.'",
+        "quality": "blunder",
+        "feedback": "You wasted half a breath on frustration. Your teammate heard 'damn I was so close' and half-missed the count."
+      },
+      {
+        "id": 3,
+        "text": "'Two A.'",
+        "quality": "good",
+        "feedback": "Clean and fast but under-informative. You saw positions and util — share them."
+      },
+      {
+        "id": 4,
+        "text": "'Two A, one default one site, I think one has smoke left, be careful.'",
+        "quality": "excellent",
+        "feedback": "Good density, slightly bloated at the end ('be careful' adds nothing). Still very usable."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "c1-2",
+    "packId": "4",
+    "theme": "communication",
+    "subcategory": "Tone — Losing streak",
+    "map": "Any",
+    "title": "Down 3-9, your IGL just missed a key shot and went quiet",
+    "description": "You are CT. Score 3-9. Your IGL, usually your loudest comms, just whiffed an AWP shot and hasn't spoken since. Freeze time of round 13.",
+    "macro": {
+      "title": "Context",
+      "description": "Tone at 3-9 decides whether you come back to 9-9 or lose 3-13. Silence or blame from a key voice sinks the half."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "One teammate should break the silence with information and a micro-plan, not a speech."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Short, confident, forward-looking. No post-mortem mid-half."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Stay quiet too, let him process.",
+        "quality": "blunder",
+        "feedback": "The whole team mirrors the silence. Round 13 becomes autopilot and you lose it too."
+      },
+      {
+        "id": 2,
+        "text": "'Happens, we reset. Stack B, I take close, we play slow.' — then run the round.",
+        "quality": "perfect",
+        "feedback": "Acknowledges, hands him a plan, moves forward. He just has to execute."
+      },
+      {
+        "id": 3,
+        "text": "'Bro what was that, we need that shot.'",
+        "quality": "blunder",
+        "feedback": "You amplified the worst voice in his head. Expect him to whiff again or stop calling entirely."
+      },
+      {
+        "id": 4,
+        "text": "'No worries, let's go boys!' with no actual plan.",
+        "quality": "good",
+        "feedback": "Positive but hollow. He needs a handoff of the decision load, not a cheerleader."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "c1-3",
+    "packId": "4",
+    "theme": "communication",
+    "subcategory": "Information — What you do",
+    "map": "Any",
+    "title": "About to push out of smoke with a flash",
+    "description": "You have a flash ready, teammate has an AK holding behind you. You plan to flash over the smoke and push.",
+    "macro": {
+      "title": "Context",
+      "description": "Action comms sync you and the trader. If the flash pops and he's looking the wrong way, the entry is a solo run."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Tell them what you will do in the order it happens — short, present tense."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "No 'I think I'll maybe flash and then...' — cost-per-syllable is too high."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "'Flashing, pushing, trade me.'",
+        "quality": "perfect",
+        "feedback": "Three verbs, present tense, implicit timing. Teammate knows exactly what to do."
+      },
+      {
+        "id": 2,
+        "text": "Throw flash without calling it.",
+        "quality": "blunder",
+        "feedback": "You flash your own teammate or he looks away at the wrong moment and doesn't trade. You die alone."
+      },
+      {
+        "id": 3,
+        "text": "'I'm going to flash and then push, you ready to trade me?' — wait for reply.",
+        "quality": "good",
+        "feedback": "Information is there but you burned 2s of timing. Sometimes that's fine, usually not."
+      },
+      {
+        "id": 4,
+        "text": "'Flash in 2' — count down — then flash.",
+        "quality": "excellent",
+        "feedback": "Great for coordinated executes but unnecessary for a quick solo entry. Slight overhead."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "tp1-1",
+    "packId": "5",
+    "theme": "teamplay",
+    "subcategory": "Trading — Revenge",
+    "map": "Inferno",
+    "title": "Your entry died first contact in banana",
+    "description": "T side Inferno. Your entry pushed banana and died to an AWP from car. You have AK, 2nd in line. Teammate behind you has utility.",
+    "macro": {
+      "title": "Context",
+      "description": "Trading the entry is the single highest-ROI team play in CS. One tradeable death is neutral; one untraded death is a 4v5."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Peek the exact same pixel he died from, same height, fast. The AWPer is not fully reset yet."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Trading' — one word, so the 3rd player holds the flash instead of peeking too."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Peek wide and high exactly where he died, AK pre-aimed at car.",
+        "quality": "perfect",
+        "feedback": "Classic trade frag. AWPer is mid-reload or mid-scope-out, you win the duel."
+      },
+      {
+        "id": 2,
+        "text": "Wait 3s, let AWPer reposition, then ask for smoke.",
+        "quality": "blunder",
+        "feedback": "You turned a trade into a re-execute. AWPer is now reset and holding a different angle."
+      },
+      {
+        "id": 3,
+        "text": "Shoulder-peek first to confirm he's still there.",
+        "quality": "good",
+        "feedback": "Information is nice but you give up tempo — AWPer may scope out and pre-fire your real peek."
+      },
+      {
+        "id": 4,
+        "text": "Call for molotov from teammate to burn him out, then peek.",
+        "quality": "excellent",
+        "feedback": "Safer, trades the tempo for a guaranteed displacement. Correct if teammate has molly and you don't mind the delay."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_inferno.png"
+  },
+  {
+    "id": "tp1-2",
+    "packId": "5",
+    "theme": "teamplay",
+    "subcategory": "Crossfires",
+    "map": "Mirage",
+    "title": "Setting up a B site crossfire as 2 CTs",
+    "description": "CT Mirage B, you and one teammate. Where do you two set up so a push through apartments dies to two angles at once?",
+    "macro": {
+      "title": "Context",
+      "description": "A crossfire forces the pushing T to aim in two different directions at once. If both CTs look at the same angle, it's not a crossfire — it's a stack."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Angles should be roughly 90°+ apart from the T's perspective. No overlap in arc."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Agree out loud who takes close, who takes the off-angle, before round start."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Both players at default, crouched behind boxes.",
+        "quality": "blunder",
+        "feedback": "Same angle, same line of sight. The T flashes once and kills you both."
+      },
+      {
+        "id": 2,
+        "text": "One at bench holding close apps, one at car facing apps — 90° split.",
+        "quality": "perfect",
+        "feedback": "Textbook Mirage B crossfire. The T entering apps has to pick one angle to clear first and dies to the other."
+      },
+      {
+        "id": 3,
+        "text": "One at market window, one at B default.",
+        "quality": "good",
+        "feedback": "Covers 2 pushes (mid and apps) but for an apps-only read, bench+car is tighter."
+      },
+      {
+        "id": 4,
+        "text": "One at bench, one stacked right next to him.",
+        "quality": "blunder",
+        "feedback": "Both die to one grenade. Not a crossfire at all."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_mirage.png"
+  },
+  {
+    "id": "tp1-3",
+    "packId": "5",
+    "theme": "teamplay",
+    "subcategory": "Spontaneous organization",
+    "map": "Any",
+    "title": "Your IGL died round start, you are 4v5 with a mid play half-done",
+    "description": "T side, IGL died to an AWP shot 12s into the round. Pre-planned execute was a B hit with his molly as the opener. Now you have 1:20 on the clock, 4 players, and his molly is on his dead body.",
+    "macro": {
+      "title": "Context",
+      "description": "IGL dead early is the standard test of a team. If nobody picks up the call in 5 seconds, the round defaults to each player doing their own thing."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Whoever is most informed and calmest takes the call — permanently for this round. Don't alternate."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "State clearly: 'I'm calling. Default mid, then A on my call.' No negotiation."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Secondary caller takes over with one short plan, team acknowledges, executes.",
+        "quality": "perfect",
+        "feedback": "This is what separates tier 1 from tier 3. The round survives the IGL's death."
+      },
+      {
+        "id": 2,
+        "text": "Each player picks their angle individually, no new plan.",
+        "quality": "blunder",
+        "feedback": "Five solo decisions, zero coordination. Round lost to the first 2v1."
+      },
+      {
+        "id": 3,
+        "text": "Full save, give up the round.",
+        "quality": "good",
+        "feedback": "Sometimes correct at low econ, but here you have the buy and the clock — saving is overly conservative."
+      },
+      {
+        "id": 4,
+        "text": "Pick up IGL's molly, re-attempt the original plan.",
+        "quality": "excellent",
+        "feedback": "Honors the plan, executes with the right util, but you still need someone calling mid-execute. Combine with option 1 for perfect."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "a1-1",
+    "packId": "6",
+    "theme": "attitude",
+    "subcategory": "As teammate — Refraining from spilling frustration",
+    "map": "Any",
+    "title": "Teammate just threw a $5000 AWP to a flash peek",
+    "description": "He pushed too aggressive, got flashed, died with the AWP in enemy hands. It's the second time this map.",
+    "macro": {
+      "title": "Context",
+      "description": "How you respond to the mistake — in the next 3 seconds — shapes the next 5 rounds more than his mistake itself."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Channel frustration into a shared problem, not a targeted complaint."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Acknowledge the cost, reset the plan, move on in under one round."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "'Bro come on, that's the second AWP, stop peeking.'",
+        "quality": "blunder",
+        "feedback": "Targeted, public, repetitive. He tilts or goes quiet, neither helps. Your own comms degrade in the stress too."
+      },
+      {
+        "id": 2,
+        "text": "Stay silent, cold, passive-aggressive sighs.",
+        "quality": "blunder",
+        "feedback": "The silence is louder than the complaint. He knows. Everyone else feels it. Tilt contagion."
+      },
+      {
+        "id": 3,
+        "text": "'Rough spot. We're on force next, I'll drop, you hold close.'",
+        "quality": "perfect",
+        "feedback": "Acknowledges reality, hands him a role, moves forward. He saves face and executes."
+      },
+      {
+        "id": 4,
+        "text": "'Don't worry about it, you're fine!'",
+        "quality": "good",
+        "feedback": "Positive but dismissive — he knows he made a mistake, pretending otherwise feels hollow. Acknowledge briefly, then move on."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "a1-2",
+    "packId": "6",
+    "theme": "attitude",
+    "subcategory": "As individual — Promoting positive energy",
+    "map": "Any",
+    "title": "You got ace'd out of a 1v4 on a bomb plant",
+    "description": "You just had the round of your life. Score 10-10. Next freeze time.",
+    "macro": {
+      "title": "Context",
+      "description": "What you do after a hero round sets the next three rounds' energy. Overcelebrate and the opponent re-locks; go flat and the team wonders if it was a one-off."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Acknowledge, reset focus, keep the energy loaded — not spent."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Love that — here's the next round' is better than two minutes of replay."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Immediate 'Let's go! Next round, same energy, B default, reads on mid.'",
+        "quality": "perfect",
+        "feedback": "Energy channeled forward into a call. Team rides the wave into the next round."
+      },
+      {
+        "id": 2,
+        "text": "Spend freeze time describing each kill to hype the team.",
+        "quality": "blunder",
+        "feedback": "You spent the buy time replaying the last round. Next round starts without a plan, and energy is already peaked."
+      },
+      {
+        "id": 3,
+        "text": "Downplay it, 'it was luck, focus up'.",
+        "quality": "good",
+        "feedback": "Humble but you wasted a morale lift. Accept the win, then push forward."
+      },
+      {
+        "id": 4,
+        "text": "Quiet fist pump, wait for the IGL to call, execute.",
+        "quality": "excellent",
+        "feedback": "Disciplined and low-risk. Slightly under-utilizes the momentum but never hurts the team."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "a1-3",
+    "packId": "6",
+    "theme": "attitude",
+    "subcategory": "As teammate — Promoting positive energy",
+    "map": "Any",
+    "title": "Your teammate is on a 0-for-7 streak",
+    "description": "He hasn't gotten a kill in 7 rounds. He's still calling and playing his role but you can hear him losing confidence on mic. Score is 8-7 your favor.",
+    "macro": {
+      "title": "Context",
+      "description": "A teammate who stops trying is a 4v5. A teammate who keeps trying but tilts is still a 5v5 if the team manages the energy."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Give him a frag opportunity, not a pep talk."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Short and task-based. 'Run this lurk, it's free' beats 'you got this man'."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Put him on the easiest frag in the round — a lurk through a smoke where the opener is guaranteed.",
+        "quality": "perfect",
+        "feedback": "Manufactures a confidence kill. The frag resets his round and often the next three."
+      },
+      {
+        "id": 2,
+        "text": "Long pep talk in freeze time.",
+        "quality": "blunder",
+        "feedback": "He knows. Words don't fix form. Also burns his focus before the round starts."
+      },
+      {
+        "id": 3,
+        "text": "Pretend you didn't notice.",
+        "quality": "good",
+        "feedback": "Better than a pep talk. Neutral is fine if you can't actively help."
+      },
+      {
+        "id": 4,
+        "text": "Bench him next map, swap to a stand-in.",
+        "quality": "blunder",
+        "feedback": "Seven bad rounds is variance, not a trend. Swapping mid-bo3 usually kills the team's cohesion worse than carrying him."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "mf1-1",
+    "packId": "7",
+    "theme": "mental",
+    "subcategory": "Staying focused when it's easy",
+    "map": "Any",
+    "title": "You're up 11-2, starting a new half",
+    "description": "Comfortable lead, new half, new side. Your team is loose and talkative. Enemy looks beaten.",
+    "macro": {
+      "title": "Context",
+      "description": "12-2 halves that become 16-14 losses are common because the winning team stops taking the game seriously before the other team stops trying."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Reset focus as if the score were 0-0 for one or two rounds, then adjust if actually easy."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "One serious round resets the habit. Don't let the first round of the half be a meme round."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Play pistol round as if it's a tied scoreline — full comms, proper positions.",
+        "quality": "perfect",
+        "feedback": "You protect the lead and signal to the team that standards haven't dropped. Easiest way to close out a map."
+      },
+      {
+        "id": 2,
+        "text": "Eco up for fun, deagle round, see what happens.",
+        "quality": "blunder",
+        "feedback": "You hand them a free pistol round and the momentum shift is real. 11-2 → 11-7 halves are self-inflicted."
+      },
+      {
+        "id": 3,
+        "text": "Full buy pistol round — 5 P250s with armor.",
+        "quality": "good",
+        "feedback": "Mechanical overkill but at least serious. Pistol round itself still plays normally and that's what matters."
+      },
+      {
+        "id": 4,
+        "text": "Call a deliberate default, extra slow, nothing flashy.",
+        "quality": "excellent",
+        "feedback": "Buys focus, denies the memeing. Slightly passive but safe."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "mf1-2",
+    "packId": "7",
+    "theme": "mental",
+    "subcategory": "Keep playing 100% in losses",
+    "map": "Any",
+    "title": "Down 2-11, first half ending",
+    "description": "You lost 11 rounds on the trot. Two more rounds and it's half time. Players are checking out mentally.",
+    "macro": {
+      "title": "Context",
+      "description": "These last two rounds are the seed for the second half. If you play them at 40%, the second half starts at 40%. If you play them at 100%, you enter half time with information and energy."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Play the next two rounds as study rounds — intent to win, but also intent to extract reads."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Announce the frame. 'These two rounds we play 100%, we look for reads we use after half.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Tell the team 'play these 100%, we're collecting info for second half', then actually do it.",
+        "quality": "perfect",
+        "feedback": "Reframes the rounds from 'another loss' to 'scouting rounds'. Protects the second half."
+      },
+      {
+        "id": 2,
+        "text": "Full eco both rounds, save everything.",
+        "quality": "good",
+        "feedback": "Economy-smart but you miss two rounds of real read data. Sometimes the right call when buy is truly impossible."
+      },
+      {
+        "id": 3,
+        "text": "One guy yolos for frags, others save.",
+        "quality": "blunder",
+        "feedback": "Uncoordinated. You get no reads and no momentum, and the yolo-er tilts harder."
+      },
+      {
+        "id": 4,
+        "text": "Regular force buy, play for a single round win.",
+        "quality": "excellent",
+        "feedback": "Aggressive but valid. If the force wins, the mental flip is enormous. Slightly less information-generating than option 1."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "mf1-3",
+    "packId": "7",
+    "theme": "mental",
+    "subcategory": "Mental reset between rounds/maps",
+    "map": "Any",
+    "title": "Lost map 1 in overtime 19-22, map 2 starts in 4 minutes",
+    "description": "You lost a 45-minute map on the last round of OT. You held the match-point round twice and lost both. Next map starts soon. You feel foggy.",
+    "macro": {
+      "title": "Context",
+      "description": "The brain takes 5-10 minutes to clear the emotional hangover from a close loss. If you walk into map 2 still mentally on map 1, the first 5 rounds are ghosts."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Do one concrete physical reset — hydrate, stand, breathe. Don't re-live the OT in your head."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Agree on no post-mortem for 5 minutes. Review is for after the bo3."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Mute voice for 2 min, hydrate, stand up, 4 slow breaths, then re-engage with team for map 2 setup.",
+        "quality": "perfect",
+        "feedback": "Physical reset short-circuits the rumination loop. You come back to the team ready to plan, not to re-feel."
+      },
+      {
+        "id": 2,
+        "text": "Replay the last OT round 3 times in your head while drinking water.",
+        "quality": "blunder",
+        "feedback": "You just anchored the loss. Map 2 round 1 will be played by the ghost of map 1 round 41."
+      },
+      {
+        "id": 3,
+        "text": "Ask coach/IGL to do a quick tactical adjustment talk now.",
+        "quality": "good",
+        "feedback": "Productive but too early. Do the reset first, the talk second. Otherwise the talk lands on a fogged brain."
+      },
+      {
+        "id": 4,
+        "text": "Queue up a DM server, get 15 kills to 'reset the aim'.",
+        "quality": "excellent",
+        "feedback": "Decent if you're a player who resets via kills. Risk: if DM goes badly, you walk into map 2 even tilted. Option 1 is safer."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "d1-1",
+    "packId": "8",
+    "theme": "decision",
+    "subcategory": "Clutches — 1v2 with kit",
+    "map": "Mirage",
+    "title": "1v2, A site, bomb ticking, both enemies alive",
+    "description": "CT Mirage A. Bomb is planted default. 22 seconds on the bomb. You have kit, AK, 50 HP. You know one enemy is on ticket booth and one just went jungle.",
+    "macro": {
+      "title": "Context",
+      "description": "A 1v2 post-plant with kit is a clock-management problem as much as an aim problem. Isolate one duel at a time."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Split them with your position — force them to cover two angles, take the one they have to break first."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Dead teammates: only info, no backseat calls. Let the clutcher think."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Fake defuse from close, bait ticket booth's peek, kill him, then use kit to real-defuse on a time split.",
+        "quality": "perfect",
+        "feedback": "Isolates the duel with ticket booth first, leaving jungle blind. Then kit lets you defuse half the time you otherwise would — exactly why it matters."
+      },
+      {
+        "id": 2,
+        "text": "Peek jungle first because he's 'less set'.",
+        "quality": "good",
+        "feedback": "Valid if you heard him land late, but you're giving ticket booth a free pre-aim on your back. Higher variance."
+      },
+      {
+        "id": 3,
+        "text": "Start defusing openly, pre-aim ticket booth.",
+        "quality": "blunder",
+        "feedback": "Jungle peeks your unprotected back and you die without a shot. Kit wasted."
+      },
+      {
+        "id": 4,
+        "text": "Play for 10s silence to make them peek you, then take the duel that comes.",
+        "quality": "excellent",
+        "feedback": "Patient, high-EV. Only risk: clock runs out if both refuse to peek, and the bomb defuse becomes too tight."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_mirage.png"
+  },
+  {
+    "id": "d1-2",
+    "packId": "8",
+    "theme": "decision",
+    "subcategory": "Reading opponents",
+    "map": "Nuke",
+    "title": "Same opponent has defaulted the last 4 T rounds",
+    "description": "Enemy T side has opened with slow mid takes in all 4 rounds since the first half. No B rush, no A rush, no fakes. It is round 21.",
+    "macro": {
+      "title": "Context",
+      "description": "Four repeats is a read. Either they are genuinely slow by default, or they are baiting you into expecting slow, or they are out of ideas."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Test the read with a cheap action — don't stake the round on it, gather more info."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Call the read explicitly so the team knows why you're doing something different."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Aggressive yard pick from outside to exploit the slow default, with 2 back as safety.",
+        "quality": "perfect",
+        "feedback": "Test the read with one player's aggression, 4 on setup. Cheap to test, big reward if the read is right."
+      },
+      {
+        "id": 2,
+        "text": "Full stack ramp with 4 players, leave outside open.",
+        "quality": "blunder",
+        "feedback": "You bet the round on the read. If they fake slow and flood outside, you lose the round and the read was never tested."
+      },
+      {
+        "id": 3,
+        "text": "Play standard setup, note the read for next round.",
+        "quality": "good",
+        "feedback": "Safe but passive. You burn another round without exploiting information you already have."
+      },
+      {
+        "id": 4,
+        "text": "Save econ, play retake only.",
+        "quality": "blunder",
+        "feedback": "Retake-only vs a slow default is the worst matchup. You give them time and you don't attack the slow opener."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_nuke.png"
+  },
+  {
+    "id": "d1-3",
+    "packId": "8",
+    "theme": "decision",
+    "subcategory": "Powerplay — Up in economy",
+    "map": "Any",
+    "title": "Your team is up economy 5-0 on guns, enemy is on full eco",
+    "description": "CT, round 6. You have full buy + 1 extra AWP dropped, each player has $6000+. Enemy has pistols. Score 4-1.",
+    "macro": {
+      "title": "Context",
+      "description": "Powerplays are anti-eco setups. You're not trying to play standard CT, you're trying to deny map control and deny kills so they have nothing next round either."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Push forward to deny them positions — but not so far forward that they trade your AWPer on a close-range rush."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Call the powerplay explicitly. 'Forward CTs, no AWPer deep, we all fall back at first contact.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Forward setup, two players aggressive mid, AWPer off-angle slightly deep, everyone falls back at first contact.",
+        "quality": "perfect",
+        "feedback": "Denies their pistols map control, no AWP lost to a close push, full reset options if they commit a stack."
+      },
+      {
+        "id": 2,
+        "text": "Standard setup, play for site hit as usual.",
+        "quality": "good",
+        "feedback": "Doesn't cost you the round but wastes the power. They probably get close enough to steal a gun from a trade."
+      },
+      {
+        "id": 3,
+        "text": "Full stack one site, ignore the other entirely.",
+        "quality": "blunder",
+        "feedback": "Throws away the whole point of the powerplay — which is denial, not all-or-nothing defense."
+      },
+      {
+        "id": 4,
+        "text": "5 AWPs, deep angles.",
+        "quality": "blunder",
+        "feedback": "AWPs at close range vs 5 pistol rushers lose. Also why are you buying 5 AWPs on a powerplay."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "ct-1",
+    "packId": "9",
+    "theme": "decision",
+    "subcategory": "XvY reaction — 5v4 post-trade",
+    "map": "Any",
+    "title": "CT 5v4 after a trade in mid, 1:15 on the clock",
+    "description": "Your team just traded their entry for one of theirs. 5v4, bomb not seen, BP contact unknown. You are all alive, stuff untouched. How do you set up the rest of the round?",
+    "macro": {
+      "title": "Context",
+      "description": "In 5v4 the team protocol is retake BP X / grattage / utility to slow and gêner. Nobody plays for a hero frag. AWP sits in punition, not in a peek duel."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Cross your BP angles, reserve stuff for late, keep the AWPer punishing rotations — not peeking lanes."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Explicit call: 'Retake BP X, crossfire, AWP punition.' Everyone repeats their spot in 2 words."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Setup retake BP site most likely (based on infos), crossfire + AWP punition angle.",
+        "quality": "perfect",
+        "feedback": "Exactly the protocol. 5v4 you don't gamble, you slow, punish, and trade."
+      },
+      {
+        "id": 2,
+        "text": "Push forward 3/2 to catch the 4 stack before they commit.",
+        "quality": "blunder",
+        "feedback": "You convert 5v4 into a coin flip. One bad peek and it's 4v4 no trade."
+      },
+      {
+        "id": 3,
+        "text": "AWPer pushes lane for a scout pick, rest hold back.",
+        "quality": "good",
+        "feedback": "Info is valuable but losing the AWP in 5v4 is the worst outcome of the round. AWP should sit in punition."
+      },
+      {
+        "id": 4,
+        "text": "Stack the site with 4 people, 1 lurker off map.",
+        "quality": "excellent",
+        "feedback": "Covers one site well but gives up the other entirely. Works vs predictable opponents, fragile vs fakes."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "ct-2",
+    "packId": "9",
+    "theme": "decision",
+    "subcategory": "XvY reaction — 4v5 down",
+    "map": "Any",
+    "title": "CT 4v5, you just lost your mid player, bomb unseen",
+    "description": "Down a man, no contact on BP yet. Gun economy is equal. 1:20 left.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol gives two paths: 3/1 passive pari OR 4/0 overotate aggressive with trades. Passive bets on retake, overota bets on catching the push."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Pick one and commit. Half-committed overota = worst of both worlds."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "IGL calls one word. '3-1' or 'overota'. No debate mid-round."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "3/1 passive — stack likely site, 1 off-angle B, pari on retake.",
+        "quality": "excellent",
+        "feedback": "Safe read. Works when you trust your retake and haven't gathered any enemy info yet."
+      },
+      {
+        "id": 2,
+        "text": "4/0 overotate, all push the read with trades covered.",
+        "quality": "perfect",
+        "feedback": "Matches the meta: teams fake very little, so overota on a real read is high EV. Requires the trade spacing to hold."
+      },
+      {
+        "id": 3,
+        "text": "2/2 neutral, react to bomb.",
+        "quality": "blunder",
+        "feedback": "You're down a man and you split the weak side. Retakes in 4v5 from 2 angles don't work. Protocol explicitly rejects 2/2."
+      },
+      {
+        "id": 4,
+        "text": "Everyone falls off site, save round.",
+        "quality": "good",
+        "feedback": "Preserving economy is fine if the read is bad, but 1:20 with full contact info missing is too early to concede."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "ct-3",
+    "packId": "9",
+    "theme": "decision",
+    "subcategory": "Overotate trigger",
+    "map": "Anubis",
+    "title": "Anubis CT — Acti close main B at 1:25",
+    "description": "Your B anchor hears activity close main B. No utility yet, no bomb visual. You have 3 at A, 1 mid, 1 B.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol: overotate on infos 3+ OR bomb visual. Oriented reads on controls (Anubis, acti close main B) qualify as an overotate trigger — meta has very few fakes."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "When you overota, you clean the whole zone looking for the fight with trades. No half measures."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Overota called loud. B anchor anchors, 3 off A rotate with stuff order: smoke → molo → flash entry."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Overota full — A rotates via mid, cleans B with trades and utility order.",
+        "quality": "perfect",
+        "feedback": "Textbook. Oriented read on Anubis main B = real signal, and the meta almost never fakes it. High EV."
+      },
+      {
+        "id": 2,
+        "text": "Send only the mid player to help B, keep A stacked.",
+        "quality": "good",
+        "feedback": "Half-rotate. If it's a 5-man B you lose anyway; if it's a 3-stack you trade bodies without winning the zone."
+      },
+      {
+        "id": 3,
+        "text": "Hold A, assume fake, wait for bomb.",
+        "quality": "blunder",
+        "feedback": "Fakes are rare in the current meta. You waste the read and your B anchor dies 4v5."
+      },
+      {
+        "id": 4,
+        "text": "Rotate 2 players, leave 1 mid as connection.",
+        "quality": "excellent",
+        "feedback": "Still overota-flavored but slower. Works if stuff order is clean, loses tempo vs an explo."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_anubis.png"
+  },
+  {
+    "id": "ct-4",
+    "packId": "9",
+    "theme": "decision",
+    "subcategory": "Timeline management",
+    "map": "Any",
+    "title": "CT — 1:35 on the clock, no contact anywhere",
+    "description": "You are in standard setup. Clock reads 1:35. No kills, no utility, no info. What is the team's mode at this exact moment?",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol timeline: 1:55–1:30 anti-rush/explo, 1:30–1:00 anti-classique, 1:00–0:40 info reprise if needed, 0:40–0:00 setup BP, 0:30 block + BP positions."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Your behavior at 1:35 is almost anti-classique — the rush window has closed, the slow default is starting. Play the zone war, don't peek early."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "IGL calls the window. 'Anti-classique mode, zones neutres, no forward peeks.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Hold anti-classique positions, contest neutral zones with stuff sparingly, no peek without info.",
+        "quality": "perfect",
+        "feedback": "Window-correct. 1:35 is the anti-classique shell, you deny the slow map take without spending round-ending stuff."
+      },
+      {
+        "id": 2,
+        "text": "Aggressive forward peeks to take info.",
+        "quality": "good",
+        "feedback": "Works in 1:55–1:30 anti-rush, not here. You give up free kills on their default spacings."
+      },
+      {
+        "id": 3,
+        "text": "Fall to BP setup already, save stuff for retake.",
+        "quality": "blunder",
+        "feedback": "Too early. You concede map control at 1:35 and the T side defaults comfortably into BP."
+      },
+      {
+        "id": 4,
+        "text": "Burn 2 smokes to block mid and force a side commit.",
+        "quality": "good",
+        "feedback": "Useful vs specific opponents but costly. Save smokes for the 1:00 info reprise or BP setup."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "ct-5",
+    "packId": "9",
+    "theme": "decision",
+    "subcategory": "Gameplan read",
+    "map": "Any",
+    "title": "First pistol half — enemy plays slow, no executes, CIS-style",
+    "description": "Through 3 rounds the T side has posted no fast hits, no execute stuff, just slow mid takes and info. They feel like an older CIS style.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol gameplan reads: slow no-exec = double AWP; pressure-heavy hard-to-read = play neutral zones higher; fast/stack 4-1 5-0 = overotate. Always start with overota and adapt."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Against slow no-exec, two AWPs dominate zone timings. You don't need the fast reaction stuff."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Double AWP next round, I take mid long, Jeremy takes B far, rifles punish rotates.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Next buy: double AWP, pre-set cross-map angles, rifles on rotation punition.",
+        "quality": "perfect",
+        "feedback": "Protocol match. Double AWP is the explicit counter to slow no-exec styles (CIS read)."
+      },
+      {
+        "id": 2,
+        "text": "Play higher in neutral zones to read them.",
+        "quality": "good",
+        "feedback": "This is the counter for unreadable pressure styles, not confirmed slow ones. Wrong tool for this read."
+      },
+      {
+        "id": 3,
+        "text": "Overotate every round to punish stacks.",
+        "quality": "blunder",
+        "feedback": "Overota counters stacks and fast execs. Against a slow default you overota into empty space and lose the real site."
+      },
+      {
+        "id": 4,
+        "text": "Stick to standard setup, don't adapt for 3 rounds of sample.",
+        "quality": "good",
+        "feedback": "Conservative but you give up free EV — the protocol says adapt to the read, 3 rounds of consistent behavior is plenty of signal."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "tside-1",
+    "packId": "10",
+    "theme": "decision",
+    "subcategory": "Classique — neutral zones",
+    "map": "Ancient",
+    "title": "Ancient T, 3-1-1 B classique, 1:30 clock",
+    "description": "Your default is 3 players B ramp/donut, 1 mid, 1 cave. IGL has NOT called a launched committed push. What are you doing right now with your utility?",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol: no BP commit unless call is LAUNCHED. You work neutral zones — utility is used to work the zones and try to grab a kill (a contrôle). Goal = win the neutrals, then call together."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Utility here is a tool to pressure a control, not to execute. Spend smoke/molo to win cave or mid, not to hit the site."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Active extrémité (ex: Paul) plays timing if enemy overotate-prone, stays passive vs neutral-style enemies."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Use 1 smoke and 1 molo to work cave control, pressure a kill; save 2 smokes for late round.",
+        "quality": "perfect",
+        "feedback": "Exact protocol: work neutrals with utility, preserve smokes for finish. If you grab a kill, now you call together."
+      },
+      {
+        "id": 2,
+        "text": "Full commit B site with all stuff right now.",
+        "quality": "blunder",
+        "feedback": "No LAUNCHED call means no commit. You waste full utility on a site hit your team didn't agree to."
+      },
+      {
+        "id": 3,
+        "text": "Don't spend any utility, hold positions silently until 0:50.",
+        "quality": "good",
+        "feedback": "Preserves stuff but also preserves the deadlock. Protocol wants you to actively work the neutral zones."
+      },
+      {
+        "id": 4,
+        "text": "Pass the bomb mid and test A with 2, leave 3 baiting B.",
+        "quality": "blunder",
+        "feedback": "Splitting the default without a call breaks the setup. Rule: never have the bomb on your back without a launched call."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_ancient.png"
+  },
+  {
+    "id": "tside-2",
+    "packId": "10",
+    "theme": "decision",
+    "subcategory": "BP finisher selection",
+    "map": "Inferno",
+    "title": "Inferno T — you've won banana, 35s left, need to finish B",
+    "description": "Banana cleared 5v4. You have full smokes, 2 molos, 3 flashes across the team. Bomb on the entry. BP site is B.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol finishers: Limace (#1) = pose smokes, molos, dezone, progress line by line. Explo = S3 flash entry + flash facto, take space then smoke. CIS = no stuff, staggered aim-map duels."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "You have full stuff and time — Limace maximizes EV. Explo is for when you lack space. CIS is for when you lack stuff."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Call Limace. Assign smoke positions. 2 players keep smokes for afterplant."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Limace B — smokes for pit/CT, molos to dezone, progress line by line.",
+        "quality": "perfect",
+        "feedback": "Full stuff + time + numerical advantage = Limace is optimal. Protocol's default #1 for a reason."
+      },
+      {
+        "id": 2,
+        "text": "Explo with flash entry + flash facto, take space then smoke.",
+        "quality": "good",
+        "feedback": "Works but wastes the EV of having full stuff. Reserve explo for tighter windows."
+      },
+      {
+        "id": 3,
+        "text": "CIS — no stuff spent, stagger duels.",
+        "quality": "blunder",
+        "feedback": "You HAVE stuff. CIS is the 'no utility' finisher. Using it when you're fully armed throws free EV."
+      },
+      {
+        "id": 4,
+        "text": "Fake B, rotate all to A via apps.",
+        "quality": "blunder",
+        "feedback": "No. You already won banana, bomb is on the entry, and the clock doesn't allow a full cross-map fake."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_inferno.png"
+  },
+  {
+    "id": "tside-3",
+    "packId": "10",
+    "theme": "decision",
+    "subcategory": "Anti-overotate read",
+    "map": "Anubis",
+    "title": "Anubis T — enemy CT has overotated the last 2 rounds at 1:05",
+    "description": "They've punished your default by stacking your active side with 4 at 1:05. Round 5. You feel their read is locked onto you.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol: vs an overotate-prone CT, play in FAKE. Also: trou centre map when acti/fake on a BP after 45 seconds."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Sell them the active side once, drain their rotation, hit the empty site."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Explicit: 'Fake call. 2 heavy utility on A, real commit B at 0:45.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Fake A loud with 2 players and utility until 0:45, then 5-man commit B through mid trou.",
+        "quality": "perfect",
+        "feedback": "Protocol-correct counter to overotate-prone CTs. The 45s timing matches the trou-centre principle."
+      },
+      {
+        "id": 2,
+        "text": "Repeat the same A default again to confirm they overota.",
+        "quality": "blunder",
+        "feedback": "You eat a third overota. 'Changer de zone quand on bloque' — don't keep grinding a lost call."
+      },
+      {
+        "id": 3,
+        "text": "Split 3A/2B and pressure both.",
+        "quality": "good",
+        "feedback": "Decent, but a CT that stacks 4 on reads is going to punish any thin side. Full fake commits more cleanly."
+      },
+      {
+        "id": 4,
+        "text": "Force a 5v5 neutral war on mid and avoid sites.",
+        "quality": "good",
+        "feedback": "Fine in isolation, but you have info to exploit. Taking a fake window is higher EV than another neutral test."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_anubis.png"
+  },
+  {
+    "id": "tside-4",
+    "packId": "10",
+    "theme": "decision",
+    "subcategory": "Anti-eco discipline",
+    "map": "Any",
+    "title": "T side, round after eco win — enemy on full eco, you full buy",
+    "description": "Score 5-2, you just won a full buy round, they are on pistol/MP9 eco. You have rifles + full stuff.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol anti-eco: dezone at max, rigorous on risk zones (prefer close contact pistols/MP9). Play the weapon gap on wider zones vs Galil/AK."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Deny close-contact positions with rigor — don't peek wide into a spray, don't off-angle where they can jiggle."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Eco call. Tight spacing, no solo flanks. Pre-smoke close-contact angles."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Take wide zones aggressively, pre-fire common pistol spots, deny close contact with smokes.",
+        "quality": "perfect",
+        "feedback": "Protocol anti-eco. You exploit the range advantage and refuse to feed the pistol's short range."
+      },
+      {
+        "id": 2,
+        "text": "Standard default, trust rifles to outduel pistols everywhere.",
+        "quality": "good",
+        "feedback": "Works most of the time but protocol explicitly calls out rigor in close zones — standard defaults leak kills on short angles."
+      },
+      {
+        "id": 3,
+        "text": "Full stack one site to bait their eco push.",
+        "quality": "good",
+        "feedback": "Denies one side but gives them free control everywhere else. Weapon-advantage rounds want broad denial, not one stack."
+      },
+      {
+        "id": 4,
+        "text": "Save for next round anyway to stockpile.",
+        "quality": "blunder",
+        "feedback": "You skip the easiest round of the half. Enemy gets free economy reset."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "tside-5",
+    "packId": "10",
+    "theme": "decision",
+    "subcategory": "Afterplant without triangle",
+    "map": "Vertigo",
+    "title": "You hit A but a plant triangle isn't pre-defined here",
+    "description": "You're 3 alive on A Vertigo afterplant, no predefined triangle, bomb ticking. CT numerical advantage likely to get broken as they try to take control back.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol: afterplant 3 positions (triangle). If no predefined triangle: TALK, PLAY TOGETHER. Numerical advantage → CTs will take initiative, cartes redistribuées, you put yourself in punition."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Accelerate only if you make a -2 on one zone AND have enough people to commit together."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'No triangle preset — I'm ramp, Eddy elec, Jeremy heaven. Call all peeks.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Players call their spots live to form an improvised triangle, hold passive and punish peeks.",
+        "quality": "perfect",
+        "feedback": "Exact protocol: no triangle preset → talk and play together. Passive punition is the default with numerical advantage."
+      },
+      {
+        "id": 2,
+        "text": "Everyone stacks the same angle to guarantee trades.",
+        "quality": "blunder",
+        "feedback": "No triangle = no crossfire = one CT molo wipes all three. Talk, spread, triangle — even improvised."
+      },
+      {
+        "id": 3,
+        "text": "Aggressive push into their rotations before they set up.",
+        "quality": "good",
+        "feedback": "Only correct if you've already made a -2 on one zone and can commit. Otherwise you feed their retake setup."
+      },
+      {
+        "id": 4,
+        "text": "Silent hold, each plays for himself.",
+        "quality": "blunder",
+        "feedback": "Silence breaks the triangle principle. Spontaneous organization requires talking."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_vertigo.png"
+  },
+  {
+    "id": "eco-1",
+    "packId": "11",
+    "theme": "knowledge",
+    "subcategory": "Save / half / rebuy decision",
+    "map": "Any",
+    "title": "End of round review: what kind of buy is next?",
+    "description": "Post-round: your team has 1 AK saved among 5 players. Everyone else lost their gun. Bank averages $2800.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol buy ladder: 1 gun saved = one man army. 2 guns saved = halfbuy. 3 guns saved = rebuy."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Don't freelance. The ladder exists so IGL call is mechanical — no debate."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "IGL: 'One man army this round. AK plays punish, 4 eco pistols + flash.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "One man army — AK plays for punition, 4 eco support with 1 flash each.",
+        "quality": "perfect",
+        "feedback": "Exact ladder. 1 saved = one man army by protocol."
+      },
+      {
+        "id": 2,
+        "text": "Force rebuy — drop armor for all and buy pistols.",
+        "quality": "blunder",
+        "feedback": "Rebuy is the 3-saved ladder. One gun doesn't justify burning the bank."
+      },
+      {
+        "id": 3,
+        "text": "Halfbuy — 3 rifles drop, 2 eco.",
+        "quality": "blunder",
+        "feedback": "Halfbuy is the 2-saved ladder. You can't afford it on 1 saved."
+      },
+      {
+        "id": 4,
+        "text": "Full save, don't risk the saved gun.",
+        "quality": "good",
+        "feedback": "Legal choice if opponents are loaded, but you throw round EV. One man army extracts value from the 1 gun."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "eco-2",
+    "packId": "11",
+    "theme": "knowledge",
+    "subcategory": "Utility distribution",
+    "map": "Any",
+    "title": "Freezetime — who buys which utility?",
+    "description": "Full buy round. Team has full money. IGL needs to call the utility split for the T side default.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol split (map-dependent): 3 molo early / 2 molo reac. 3 smoke early / 2 smoke reac. 3 HE / 2 players with 2x flash."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Early stuff opens the default. Reac stuff closes the finisher. Flashes are concentrated on two entry players, not spread."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Eddy + Paul 2 flashes each, Jeremy + Riri + me HE, molo split 3/2, smoke split 3/2.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "3 molo early / 2 reac, 3 smoke early / 2 reac, 3 HE, 2 players with 2x flash.",
+        "quality": "perfect",
+        "feedback": "Protocol default. Balanced for default + finisher + anti-eco HE."
+      },
+      {
+        "id": 2,
+        "text": "Everyone buys 1 flash + 1 smoke + 1 HE for symmetry.",
+        "quality": "good",
+        "feedback": "Symmetric but thin on entry. Protocol concentrates 2x flash on entry players for actual opening power."
+      },
+      {
+        "id": 3,
+        "text": "5 smokes, no flashes, no HE.",
+        "quality": "blunder",
+        "feedback": "No flash = no entry. Protocol requires concentrated flash on 2 players."
+      },
+      {
+        "id": 4,
+        "text": "Each player picks what they feel like.",
+        "quality": "blunder",
+        "feedback": "Freelance utility = no coordinated finisher. Protocol exists specifically to prevent this."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "eco-3",
+    "packId": "11",
+    "theme": "knowledge",
+    "subcategory": "Forcebuy timing",
+    "map": "Any",
+    "title": "When do you forcebuy on this map?",
+    "description": "Series prep: IGL is deciding which round of the map is the forcebuy window.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol: forcebuy — à travailler 1 par map. One designated force round per map, rehearsed."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Forcebuy isn't reactive, it's scheduled. You pick the round where the enemy economy is weakest and drill it."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Map X → force is round N. Utility split: Y. Positions: Z.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Designate one specific forcebuy round per map, rehearse the utility + positions for it.",
+        "quality": "perfect",
+        "feedback": "Protocol-correct: one force per map, worked in advance, not a freestyle call."
+      },
+      {
+        "id": 2,
+        "text": "Force every time you lose pistol + anti-eco.",
+        "quality": "good",
+        "feedback": "Common pattern but protocol wants a specific trained round, not a reactive reflex."
+      },
+      {
+        "id": 3,
+        "text": "Never force, always save to rebuy.",
+        "quality": "blunder",
+        "feedback": "Gives up entire rounds the protocol wants converted. Force exists for a reason."
+      },
+      {
+        "id": 4,
+        "text": "Force whenever the IGL feels it on the day.",
+        "quality": "blunder",
+        "feedback": "Freestyle forces = untrained utility = wasted rounds. Protocol says work one per map."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "eco-4",
+    "packId": "11",
+    "theme": "knowledge",
+    "subcategory": "Anti-force structure",
+    "map": "Any",
+    "title": "Enemy is forcing after their pistol loss — your CT setup?",
+    "description": "You won pistol + anti-eco, you expect their force now. Full buy. CT side. They'll come with Galil/MP9/pistols.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol anti-force: gestion du round, compréhension, setup. Plus: HE in anti-force rounds (swap one flash for HE)."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Close angles are their gift. Wide angles are yours. HE neutralizes their tight stacks."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Anti-force setup. HE instead of second flash. No wide peeks, no off-angles in close.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Wide anti-force setup, HE swap for second flash, no close off-angles.",
+        "quality": "perfect",
+        "feedback": "All three protocol elements: round management (wide), compréhension (close contact is their gift), setup (HE swap)."
+      },
+      {
+        "id": 2,
+        "text": "Normal buy, same setup as last round.",
+        "quality": "good",
+        "feedback": "Viable if their force is weak, but you leave EV on the table by not swapping to HE."
+      },
+      {
+        "id": 3,
+        "text": "AWP deep, rifles close to try to trade kills.",
+        "quality": "blunder",
+        "feedback": "AWP + rifles close range against Galil/pistol stacks = you lose the angle battle the protocol warns against."
+      },
+      {
+        "id": 4,
+        "text": "Full save, bank money.",
+        "quality": "blunder",
+        "feedback": "You just spent pistol + anti-eco rounds winning this economy. Saving now throws the compounding advantage."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "cp-1",
+    "packId": "12",
+    "theme": "communication",
+    "subcategory": "Call structure",
+    "map": "Any",
+    "title": "You spot 2 Ts peeking banana — how do you call it?",
+    "description": "You're B anchor on Inferno, you see 2 enemies peek car, one with AWP. It's 1:40.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol call structure: Numbers, Prénom, Details, Deathcam, Intensity."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "One dense line beats a 5-second monologue. Structure = parseable under pressure."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Deliver all 5 fields: number, name (if known), detail (AWP / angle / stuff), deathcam (later), intensity (tone)."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "'2 banana, AWP car, one peeking — heads up' — tone raised.",
+        "quality": "perfect",
+        "feedback": "Numbers (2), position detail (AWP + car), action (peeking), intensity (raised tone). Dense and parseable."
+      },
+      {
+        "id": 2,
+        "text": "'They're here it's bad oh my god they have an AWP someone rotate'.",
+        "quality": "blunder",
+        "feedback": "No numbers, no location, just emotion. Protocol explicitly prioritizes structure over panic."
+      },
+      {
+        "id": 3,
+        "text": "'Two banana'.",
+        "quality": "good",
+        "feedback": "Numbers + location is the minimum. Missing the detail (AWP) that determines how teammates play the angle."
+      },
+      {
+        "id": 4,
+        "text": "'Enemy somewhere near B, be careful'.",
+        "quality": "blunder",
+        "feedback": "No number, no precise location, no actionable info. Worse than silence."
+      }
+    ],
+    "image": "/images/maps/radar-images/de_inferno.png"
+  },
+  {
+    "id": "cp-2",
+    "packId": "12",
+    "theme": "communication",
+    "subcategory": "Freezetime drops",
+    "map": "Any",
+    "title": "Freezetime — you don't have enough for a rifle",
+    "description": "You have $3100, team has money. IGL hasn't called the buy yet.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol: wait for the call before buying. Ask for drops in sayteam during freezetime with the prénom."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Don't buy armor + pistol before the call. Don't shout the drop in voice mid-call. Sayteam with name."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Sayteam: 'Paul drop rifle svp'. Wait for confirm, then buy armor."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Sayteam 'Paul drop rifle svp', wait for confirm, then buy armor + utility.",
+        "quality": "perfect",
+        "feedback": "Protocol-correct: sayteam with prénom, call respected, no auto-buy."
+      },
+      {
+        "id": 2,
+        "text": "Voice-shout 'SOMEONE DROP ME' over the IGL's call.",
+        "quality": "blunder",
+        "feedback": "Talks over the call, no prénom target, adds noise to the worst moment of freezetime."
+      },
+      {
+        "id": 3,
+        "text": "Buy a pistol + armor immediately, sort it out mid-round.",
+        "quality": "blunder",
+        "feedback": "Violates 'wait for the call before buying'. If IGL calls eco you've blown your money."
+      },
+      {
+        "id": 4,
+        "text": "Sayteam 'need gun' with no name.",
+        "quality": "good",
+        "feedback": "Structure-correct (sayteam) but missing the prénom target — any drop could come from anyone and cause double-drops."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "cp-3",
+    "packId": "12",
+    "theme": "communication",
+    "subcategory": "Retake comms",
+    "map": "Any",
+    "title": "Bomb planted B — you're 4 alive on a retake",
+    "description": "40 seconds on the bomb. You and 3 teammates are rotating. Mixed kit status.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol retake: wait for each other, organize, check kits, priority utility, 40s window. Think TRADES. CT = wait for errors, minutieux et patient — Ts always try to be active."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "No solo-peek retakes. Align kit holder, utility, positions, THEN execute."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Kits: me. Priority stuff: smoke CT, molo pit. I go last, Jeremy flash. Trade spacing.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Call kit holder, priority stuff, trade spacing, then go together.",
+        "quality": "perfect",
+        "feedback": "Every protocol element: attendre, organiser, kit check, stuff prio, trades."
+      },
+      {
+        "id": 2,
+        "text": "First one rotated peeks immediately to steal the tempo.",
+        "quality": "blunder",
+        "feedback": "Solo peek dies, Ts trade into the retake 3v3. Protocol explicitly says wait."
+      },
+      {
+        "id": 3,
+        "text": "Rush in together without calling kit or stuff order.",
+        "quality": "good",
+        "feedback": "Trades are there but no kit call = if the kit holder dies first you might not get a defuse even after aces. Needs the 2 extra seconds."
+      },
+      {
+        "id": 4,
+        "text": "Sit outside and wait for plant timer to force them to peek.",
+        "quality": "blunder",
+        "feedback": "40s is the retake window, not a wait-and-save window. You concede the round if they hold plant."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "ma-1",
+    "packId": "13",
+    "theme": "attitude",
+    "subcategory": "Trade mindset",
+    "map": "Any",
+    "title": "Teammate just dry-peeked and died — you have the trade",
+    "description": "Mid-round, your entry dies 1-for-0 on an unfavorable peek. You have a clear window to trade. Tilt could creep.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol: being in trade position is a STATE OF MIND. It signals you want to play WITH your partner. Keep it in mind, it's positive and wins rounds."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Don't tilt. Take the trade, then re-check spacing. Save the feedback for post-round."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Trade first, debrief later. On comms: 'Traded. Rotate [name].' Not: 'Why did you peek that?'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Take the trade cleanly, reset spacing, debrief after the round.",
+        "quality": "perfect",
+        "feedback": "Exact protocol. Trade-mindset is a state; debrief isn't mid-round."
+      },
+      {
+        "id": 2,
+        "text": "Trade, then immediately 'dude what are you doing' on comms.",
+        "quality": "blunder",
+        "feedback": "Frustration spill mid-round violates the attitude protocol. Wins nothing, kills energy."
+      },
+      {
+        "id": 3,
+        "text": "Don't trade, punish him by refusing to peek, play solo.",
+        "quality": "blunder",
+        "feedback": "You let the team lose the round to 'prove a point'. Anti-team protocol."
+      },
+      {
+        "id": 4,
+        "text": "Trade and crack a light joke on comms to reset energy.",
+        "quality": "excellent",
+        "feedback": "Matches protocol: 'blagues are welcome, concentré ET décontracté'. Slight risk if joke lands wrong with a tilted teammate."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "ma-2",
+    "packId": "13",
+    "theme": "attitude",
+    "subcategory": "Opponent analysis — roles",
+    "map": "Any",
+    "title": "First half demo review — labeling enemy roles",
+    "description": "You're reviewing half one before switching sides. The protocol says to play WITH the enemy pseudos labeled by role.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol analysis: regarder et jouer avec les pseudos — extré A, extré B, pivot, snipe. Plus style tag: CIS or STACK or PRESSION."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Labels turn 'their #3 peeked mid' into 'their pivot is rotating at 1:20' — actionable."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Share the labels with the team before the half so comms reference roles, not random nicknames."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Tag each enemy as extré A / extré B / pivot / snipe, plus team style (CIS/STACK/PRESSION).",
+        "quality": "perfect",
+        "feedback": "Exactly the protocol analysis frame. Labels become callouts mid-round."
+      },
+      {
+        "id": 2,
+        "text": "Only track who has the AWP.",
+        "quality": "good",
+        "feedback": "Snipe label is covered but you miss the rotation structure (pivot) that dictates your fake timings."
+      },
+      {
+        "id": 3,
+        "text": "Track individual stats — who has the highest ADR — and play around them.",
+        "quality": "blunder",
+        "feedback": "Stats are outcomes, not roles. Protocol wants the structural label, not the leaderboard."
+      },
+      {
+        "id": 4,
+        "text": "Don't label, trust feel mid-round.",
+        "quality": "blunder",
+        "feedback": "Feel ≠ repeatable reads. Labels let the whole team share the read, not just you."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "ma-3",
+    "packId": "13",
+    "theme": "attitude",
+    "subcategory": "Change zone when blocked",
+    "map": "Any",
+    "title": "You've been running the same B default 4 rounds, it keeps failing",
+    "description": "Same call, same utility, same result: bad trade on entry. Score is slipping. IGL is hesitating on the 5th repeat.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol: change zone when you're blocked. Don't stay stubborn on the same call."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "4 failed reps = signal, not noise. Move the attack."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "IGL: 'Shelving B default. A lurk setup this round.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Shelf the B default for a few rounds, run an A-side default instead.",
+        "quality": "perfect",
+        "feedback": "Direct protocol match: change zone when blocked. Stops the bleeding, adds doubt to their read."
+      },
+      {
+        "id": 2,
+        "text": "Repeat the default once more with extra utility.",
+        "quality": "blunder",
+        "feedback": "Stubbornness. Same call that failed 4x with more stuff = same fail and less stuff next round."
+      },
+      {
+        "id": 3,
+        "text": "Keep the B default but change the entry player.",
+        "quality": "good",
+        "feedback": "Minor tweak — sometimes works, but protocol wants the zone changed, not the player swapped."
+      },
+      {
+        "id": 4,
+        "text": "Stop running team defaults and freestyle for a round.",
+        "quality": "blunder",
+        "feedback": "Abandons structure entirely. The fix is another structured call, not no call."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "ma-4",
+    "packId": "13",
+    "theme": "attitude",
+    "subcategory": "Style tagging",
+    "map": "Any",
+    "title": "Reading the enemy style from the first 3 rounds",
+    "description": "Three rounds into the half. You need to tag their style before you pick a counter-gameplan.",
+    "macro": {
+      "title": "Context",
+      "description": "Protocol style tags: CIS (slow, no exec), STACK (stack 4/1 or 5/0), PRESSION (heavy pressure, hard to read)."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Each tag has a protocol counter: CIS → double AWP. PRESSION → neutral zones higher. STACK → overotate."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Tag the style loud. 'They're CIS. Double AWP next round.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Commit to one tag (CIS/STACK/PRESSION) from the 3-round sample and call the matching counter.",
+        "quality": "perfect",
+        "feedback": "Protocol-correct. Always start with overota, adapt to the tag, pick the counter."
+      },
+      {
+        "id": 2,
+        "text": "Wait until round 6 to be 'sure' before tagging.",
+        "quality": "good",
+        "feedback": "Conservative. You lose 3 rounds of EV waiting for confidence you already have after 3 rounds."
+      },
+      {
+        "id": 3,
+        "text": "Skip the tag, play your standard regardless of their style.",
+        "quality": "blunder",
+        "feedback": "Ignores the read protocol. You leave structural EV on the table every round."
+      },
+      {
+        "id": 4,
+        "text": "Tag two styles simultaneously and switch mid-round.",
+        "quality": "blunder",
+        "feedback": "Mid-round style switches break team coherence. Tag once, commit, re-evaluate next round."
+      }
+    ],
+    "image": "/images/maps/radar-images/default_png.png"
+  },
+  {
+    "id": "iem-rio-1",
+    "packId": "iem-rio-2026",
+    "theme": "decision",
+    "subcategory": "IEM Rio 2026 — Grand Final Map 1",
+    "map": "Inferno",
+    "title": "Grand Final, map 1 Inferno, 11-10 CT, round 22",
+    "description": "Your team has just won map round 21 in a 1v3 clutch with the AWP. Economy is full, enemy is weak-buy. You are CT on Inferno. They have $2800 average.",
+    "image": "/images/maps/radar-images/de_inferno.png",
+    "video": "",
+    "macro": {
+      "title": "Context",
+      "description": "Up 11-10 after a huge clutch, emotion can lead to freestyle. The tournament-grade move is to convert the economy gap mechanically."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Powerplay setup: forward CTs, AWPer off angle, nobody deep where an MP9 rush can steal the gun."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "IGL explicit call: 'Forward anti-eco, no deep AWP, trade everything.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Forward setup, AWP off-angle banana, everyone drops back at first contact to refuse gun trades.",
+        "quality": "perfect",
+        "feedback": "Textbook anti-eco. Deny banana control, refuse close duels, preserve AWP."
+      },
+      {
+        "id": 2,
+        "text": "Standard CT setup, trust the money gap.",
+        "quality": "good",
+        "feedback": "Wins most of the time but leaks free kills on close angles pistols take."
+      },
+      {
+        "id": 3,
+        "text": "Stack banana 4 to bait a push.",
+        "quality": "blunder",
+        "feedback": "Apps + mid free = you lose map control and the AWP gets exit-killed anyway."
+      },
+      {
+        "id": 4,
+        "text": "Dry peek banana with AWP to reset the tempo.",
+        "quality": "blunder",
+        "feedback": "AWP close-range vs MP9 jiggle = round lost and economy gifted."
+      }
+    ]
+  },
+  {
+    "id": "iem-rio-2",
+    "packId": "iem-rio-2026",
+    "theme": "decision",
+    "subcategory": "IEM Rio 2026 — Map 2 Overtime",
+    "map": "Mirage",
+    "title": "Mirage, OT round 3, 1v2 mid, no kit",
+    "description": "Grand final map 2 Mirage, OT round 3, score tied. You are alone on retake B with 2 Ts alive, no kit, 28s on bomb, 1 smoke + 1 HE.",
+    "image": "/images/maps/radar-images/de_mirage.png",
+    "video": "",
+    "macro": {
+      "title": "Context",
+      "description": "Grand final OT 1v2 no kit = max tension. Tournament-winning clutchers don't play for hero, they play for maximum information per peek."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Split their focus with utility, isolate one T, kill, then play the 1v1 on timing."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Dead teammates silent — no suggestions mid-clutch."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "HE towards default plant, smoke bench, isolate one peek at 12s, take that duel.",
+        "quality": "perfect",
+        "feedback": "Splits their cover, turns 1v2 into 2 back-to-back 1v1s. Elite clutch structure."
+      },
+      {
+        "id": 2,
+        "text": "Dry peek apps for double kill.",
+        "quality": "blunder",
+        "feedback": "2 holding apps = you die first shot. No info, no trade, no clutch."
+      },
+      {
+        "id": 3,
+        "text": "Smoke apps and just try to defuse.",
+        "quality": "blunder",
+        "feedback": "No kit means smoke-defuse is a 10s window — they clear the smoke in 4."
+      },
+      {
+        "id": 4,
+        "text": "Pop HE then hold default silent waiting for a rotate.",
+        "quality": "good",
+        "feedback": "Passive and legitimate but surrenders tempo. Lower EV than active utility split."
+      }
+    ]
+  },
+  {
+    "id": "iem-rio-3",
+    "packId": "iem-rio-2026",
+    "theme": "decision",
+    "subcategory": "IEM Rio 2026 — Map 3 Decider",
+    "map": "Ancient",
+    "title": "Ancient, decider map, 15-14 match point, T side eco round",
+    "description": "Match point, you are T side on eco ($1800 avg) after a lost anti-eco. Score 15-14. You have pistols + 3 smokes + 3 flashes team total.",
+    "image": "/images/maps/radar-images/de_ancient.png",
+    "video": "",
+    "macro": {
+      "title": "Context",
+      "description": "On match point, the temptation is to force — but full eco with 3 smokes is actually an asset. Protocol: take the round EV seriously, don't gift."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Smoke off the long angles, stack one side with pistols, make them duel close. Accept a 25% win as round EV."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'5-stack B cave, smoke donut + house, flash mid. One direction only.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "5-stack cave B, smoke donut + house, flash mid, straight entry.",
+        "quality": "perfect",
+        "feedback": "Max pistol EV: forced close duels, blind CTs, no long angle exposure. Tier-1 eco call."
+      },
+      {
+        "id": 2,
+        "text": "Split 3A/2B with smokes on A long.",
+        "quality": "good",
+        "feedback": "Decent but thin on both sides — pistol rounds need concentrated force."
+      },
+      {
+        "id": 3,
+        "text": "Full save round to rebuy next half.",
+        "quality": "blunder",
+        "feedback": "Match point means there is no next half. Round needs to be converted now."
+      },
+      {
+        "id": 4,
+        "text": "Force Deagles with armor.",
+        "quality": "blunder",
+        "feedback": "$1800 avg means half the team is armorless and weaponless. Deagles vs rifles = gift."
+      }
+    ]
+  },
+  {
+    "id": "pgl-1",
+    "packId": "pgl-major-2025",
+    "theme": "decision",
+    "subcategory": "PGL 2025 — Anti-eco execution",
+    "map": "Nuke",
+    "title": "Nuke CT, enemy force-buy, you full buy",
+    "description": "PGL Major 2025 group stage. Nuke CT, round 3 after pistol + anti-eco wins. Enemy forces with MP9/Galil/pistols. You have full buy + 1 AWP.",
+    "image": "/images/maps/radar-images/de_nuke.png",
+    "video": "",
+    "macro": {
+      "title": "Context",
+      "description": "Anti-force protocol: compréhension + setup + gestion. Nuke specifically punishes thin outside, so denial there is critical."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "HE swap for second flash. Wide anti-force spacing, AWP heaven for punition, no off-angles in close."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Anti-force, HE swap, AWP heaven, two outside wide.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Wide outside, AWP heaven, HE on ramp, rifles hold squeaky from power safe.",
+        "quality": "perfect",
+        "feedback": "Nuke-correct anti-force. All forces funnel through ramp or outside — both pre-covered."
+      },
+      {
+        "id": 2,
+        "text": "Full stack ramp to trade their rush.",
+        "quality": "good",
+        "feedback": "Holds ramp but gives outside entirely — they smoke heaven and rotate free."
+      },
+      {
+        "id": 3,
+        "text": "Rotate AWP to B early, anticipate a B force.",
+        "quality": "blunder",
+        "feedback": "Forces rarely hit B Nuke — they hit ramp. You lose your punition angle."
+      },
+      {
+        "id": 4,
+        "text": "Default setup, treat it as normal buy round.",
+        "quality": "good",
+        "feedback": "Works but leaks the HE-swap EV. Protocol explicitly says swap on anti-force."
+      }
+    ]
+  },
+  {
+    "id": "pgl-2",
+    "packId": "pgl-major-2025",
+    "theme": "decision",
+    "subcategory": "PGL 2025 — Powerplay setup",
+    "map": "Mirage",
+    "title": "Mirage T, 4-0 up in eco, enemy full save",
+    "description": "Score 4-0 with a dropped AWP. Enemy saves. You buy full with 2 AWPs. How do you convert?",
+    "image": "/images/maps/radar-images/de_mirage.png",
+    "video": "",
+    "macro": {
+      "title": "Context",
+      "description": "Against a save, the goal is not to find fights — it's to deny exit-kills and stack economic advantage into the half."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Control mid with the 2 AWPs, close apps and palace, plant bomb safely, afterplant triangle."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Double AWP mid, no risky peeks, plant default, triangle afterplant.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Double AWP mid, 2 rifles close apps, default A, triangle afterplant.",
+        "quality": "perfect",
+        "feedback": "Zero exit-kill risk, guaranteed plant, AWPs preserved for next round. Tier-1 save-round conversion."
+      },
+      {
+        "id": 2,
+        "text": "Quick A rush with utility to catch saving CTs.",
+        "quality": "good",
+        "feedback": "Gets some kills but risks exit kills the other way. Save rounds reward patience, not tempo."
+      },
+      {
+        "id": 3,
+        "text": "Full B commit to surprise them.",
+        "quality": "blunder",
+        "feedback": "Mirage B vs saves = worst matchup. They save to apps and you afterplant into 4 pistols crossfiring."
+      },
+      {
+        "id": 4,
+        "text": "Run out of spawn to 'force action'.",
+        "quality": "blunder",
+        "feedback": "Protocol violation. You gift them guns and info."
+      }
+    ]
+  },
+  {
+    "id": "pgl-3",
+    "packId": "pgl-major-2025",
+    "theme": "decision",
+    "subcategory": "PGL 2025 — Round management",
+    "map": "Anubis",
+    "title": "Anubis T, 5v5, 1:50 on clock, no contact yet",
+    "description": "Round 7 PGL group stage. Anubis T, no early contact, everyone alive, full buy, 1:50 remaining.",
+    "image": "/images/maps/radar-images/de_anubis.png",
+    "video": "",
+    "macro": {
+      "title": "Context",
+      "description": "Early clock on Anubis with 5v5 = neutral zones war. Protocol: no BP commit without launched call. Work controls with utility."
+    },
+    "micro": {
+      "title": "Principle",
+      "description": "Smoke connector + main, contest water with molo, save 2 smokes for BP finish."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'Neutral zones, 2 smokes reserved, work water.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "Smoke connector + main B, molo water, 2 smokes saved for finish.",
+        "quality": "perfect",
+        "feedback": "Pure protocol: neutral zone work, smoke reserve for BP closer, no premature commit."
+      },
+      {
+        "id": 2,
+        "text": "Burn all utility on early A execute.",
+        "quality": "blunder",
+        "feedback": "No launched call = no commit. You arrive at BP with empty stuff and lose afterplant."
+      },
+      {
+        "id": 3,
+        "text": "Silent default, no utility spent.",
+        "quality": "good",
+        "feedback": "Preserves stuff but protocol wants active neutral-zone work. You're wasting a 1:50 window."
+      },
+      {
+        "id": 4,
+        "text": "5-stack lurk mid while IGL decides.",
+        "quality": "blunder",
+        "feedback": "Bomb on the back with no call = protocol violation. Plus concedes both sides to the CTs."
+      }
+    ]
+  },
+  {
+    "id": "adv-vision-s1",
+    "packId": "advanced-vision-1",
+    "theme": "decision",
+    "subcategory": "Game Vision - Weak/Strong Side",
+    "map": "Dust2",
+    "title": "CT 2B, 1 Mid, 2A - Terrorist announces 3 Mid. What is your map analysis?",
+    "description": "You are CT on Dust2 with a 2B, 1 Mid, 2A setup. Your AWPer at Mid gets the info that 3 terrorists went Mid. How do you analyze the numerical weakness of your defense?",
+    "image": "/images/maps/radar-images/de_dust2.png",
+    "video": "",
+    "macro": {
+      "title": "Concept: Cutting the map in half",
+      "description": "You must divide the map in half from the CT spawn. Numerically analyze the forces present on the right and left."
+    },
+    "micro": {
+      "title": "Numerical Principle",
+      "description": "If 3 Ts are Mid (left/middle), the right side of the map (Bombsite A) becomes the weak side, regardless of the exact placement of the remaining 2 players."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "Immediate call: 'Weak side on A, be ready to support or fall back'."
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "I cut the map: they are 3 on the left/Mid, so the right side (A) is numerically the weak point. All offensive T calls towards A will be effective.",
+        "quality": "perfect",
+        "feedback": "Excellent analysis. By cutting the map, you immediately identify that the right side (A) is outnumbered and vulnerable."
+      },
+      {
+        "id": 2,
+        "text": "I ask the B player to rotate immediately to A.",
+        "quality": "good",
+        "feedback": "It's a logical reaction, but without understanding why, you risk overreacting. Analyzing the weak side should come before a blind rotation."
+      },
+      {
+        "id": 3,
+        "text": "I remain static on my position, the Mid info doesn't directly concern me.",
+        "quality": "blunder",
+        "feedback": "Global information is crucial. Ignoring the numerical imbalance means exposing yourself to a superior attack on the weak side."
+      },
+      {
+        "id": 4,
+        "text": "I push aggressively alone on my Bombsite to surprise the remaining 2 Ts.",
+        "quality": "blunder",
+        "feedback": "Playing the hero without precise info on a potentially weak or strong side is a bad risk (negative EV)."
+      }
+    ]
+  },
+  {
+    "id": "adv-vision-s2",
+    "packId": "advanced-vision-1",
+    "theme": "decision",
+    "subcategory": "Defense - Extremity Setups",
+    "map": "Dust2",
+    "title": "Bombsite B Defense - Optimal positioning for 3 players",
+    "description": "You decide to defend Bombsite B with 3 players on Dust2. Where should you position yourselves to maximize your chances against a T rush?",
+    "image": "/images/maps/radar-images/de_dust2.png",
+    "video": "",
+    "macro": {
+      "title": "Defense Setup",
+      "description": "Positioning on the left of the map (closest to the T exit) is a grave mistake. You must seek the right extremity of the Bombsite."
+    },
+    "micro": {
+      "title": "Crossfire and Bait",
+      "description": "Use the map's extremity (Fence, Plateau) and have one 'bait' player to draw attention."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'I am baiting from door, you take the kills from the back of the Bombsite.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "One hidden Fence, one hidden Plateau (right extremity of the Bombsite), and a more advanced player acting as bait.",
+        "quality": "perfect",
+        "feedback": "The perfect setup. The bait draws attention and dies, but players at the strong extremities take the revenge kills and destroy the attack."
+      },
+      {
+        "id": 2,
+        "text": "All 3 players stick close to the B doors/window (left side of the map).",
+        "quality": "blunder",
+        "feedback": "Positioning on the weak/left side of the map exposes you to being prefired or flashed without any possibility of falling back or effective revenge."
+      },
+      {
+        "id": 3,
+        "text": "One player B, one window, one door, all ready to duel at the same time.",
+        "quality": "good",
+        "feedback": "It's a standard setup but lacks depth. Without a defined bait player, duels are 50/50."
+      },
+      {
+        "id": 4,
+        "text": "All 3 stack into a boost in a corner to surprise.",
+        "quality": "blunder",
+        "feedback": "Too vulnerable to grenades. If the boost falls, the Bombsite is lost instantly."
+      }
+    ]
+  },
+  {
+    "id": "adv-vision-s3",
+    "packId": "advanced-vision-1",
+    "theme": "decision",
+    "subcategory": "Map control - Open vs Closed Zones",
+    "map": "Any",
+    "title": "Retake/Attack Choice: Open Zone (A) or Closed Zone (B)?",
+    "description": "You are 5 Ts against 2 remaining CTs. One is spotted in B (very closed zone) and the other in A (very open zone). Which Bombsite do you attack?",
+    "image": "/images/maps/radar-images/default_png.png",
+    "video": "",
+    "macro": {
+      "title": "Nature of zones",
+      "description": "Closed zones (often B Bombsites) favor defense (broken angles, easy utility). Open zones favor attack (aim, numbers advantage)."
+    },
+    "micro": {
+      "title": "Exploiting numbers advantage",
+      "description": "In a 5v1 on a Bombsite, the open zone prevents the CT from getting successive kills by hiding."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'We go A, it's open, we play the aim duels, he won't be able to hide.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "We attack Bombsite A (open zone). The numerical advantage and aim will make the difference without him being able to hide and stall.",
+        "quality": "perfect",
+        "feedback": "The optimal choice. An open zone prevents the CT from playing with broken angles to isolate successive 1v1s."
+      },
+      {
+        "id": 2,
+        "text": "We attack Bombsite B (closed zone) because it's faster to reach.",
+        "quality": "blunder",
+        "feedback": "In a closed zone, a single well-placed CT can get 2 or 3 kills with a broken angle and good utility. It's giving the opponent a chance."
+      },
+      {
+        "id": 3,
+        "text": "We split: 3 to A and 2 to B to be safe.",
+        "quality": "blunder",
+        "feedback": "You divide your numerical superiority and offer more balanced duels to isolated CTs."
+      },
+      {
+        "id": 4,
+        "text": "We wait for a CT to push to get extra information.",
+        "quality": "good",
+        "feedback": "Cautious, but you waste time. When you know where the advantage is (open zone vs 1 CT), you must execute."
+      }
+    ]
+  },
+  {
+    "id": "adv-vision-s4",
+    "packId": "advanced-vision-1",
+    "theme": "decision",
+    "subcategory": "Backup and Rotation - Focus on the core of the attack",
+    "map": "Dust2",
+    "title": "T split on A (4 Short, 1 Long) - CT reaction on Long",
+    "description": "The terrorists launch an A split: 4 through Short and only 1 through Long. You are the CT assigned to Long. What do you do?",
+    "image": "/images/maps/radar-images/de_dust2.png",
+    "video": "",
+    "macro": {
+      "title": "The core of the attack",
+      "description": "The main attack (4 players) is the most dangerous. Do not get baited by an isolated player (the lurker/bait)."
+    },
+    "micro": {
+      "title": "Immediate repositioning",
+      "description": "Drop the risky Long angle to fall back to the end of Bombsite A and help your allies on the main Short attack."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'I'm dropping Long, focus Short, don't show your heads to Long!'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "I fall back immediately to the right extremity of the Bombsite to help my allies against the 4 Short players, ignoring the isolated Long player.",
+        "quality": "perfect",
+        "feedback": "The best decision. The Long player is a bait. The real danger is on Short. By falling back, you help the critical point and gain precious backup seconds."
+      },
+      {
+        "id": 2,
+        "text": "I hold my Long angle to kill the isolated player before helping.",
+        "quality": "blunder",
+        "feedback": "You get baited. While you look for this low-impact kill, your allies get crushed in a 4v1 or 4v2 on the real front of the attack."
+      },
+      {
+        "id": 3,
+        "text": "I push Long aggressively to get the kill quickly.",
+        "quality": "blunder",
+        "feedback": "Same problem, but worse. If you die, you leave your team to defend 4v5 with a huge breach."
+      },
+      {
+        "id": 4,
+        "text": "I throw a smoke Long and focus on Short.",
+        "quality": "good",
+        "feedback": "Very good adaptation with utility, but a complete physical fallback remains the top priority in the analytical method."
+      }
+    ]
+  },
+  {
+    "id": "adv-vision-s5",
+    "packId": "advanced-vision-1",
+    "theme": "decision",
+    "subcategory": "Time Management - Comfort vs Alert Zone",
+    "map": "Any",
+    "title": "Start of CT round - Managing the first seconds",
+    "description": "The round starts, you are at the CT spawn heading towards your Bombsite. How do you manage this phase according to the comfort and alert zones?",
+    "image": "/images/maps/radar-images/default_png.png",
+    "video": "",
+    "macro": {
+      "title": "Notion of comfort",
+      "description": "A comfort zone is a space/time where the enemy cannot physically reach you. Use this time for macro-management."
+    },
+    "micro": {
+      "title": "Exploiting free time",
+      "description": "During the ~13 seconds of comfort zone, look at the minimap, analyze the economy, discuss the plan, instead of running with your weapon out without thinking."
+    },
+    "communication": {
+      "title": "Team cue",
+      "description": "'We have 10s safe, check the economy, let's go for a standard 2-1-2 setup.'"
+    },
+    "options": [
+      {
+        "id": 1,
+        "text": "I take advantage of the ~10-13s of comfort zone with my knife out to look at the minimap, the economy, and confirm the strategy with the team before entering the alert zone.",
+        "quality": "perfect",
+        "feedback": "The perfect high-level attitude. Optimizing the time where you are 100% safe to gather information and formulate strategy."
+      },
+      {
+        "id": 2,
+        "text": "I pull out my weapon right from the spawn in case a T 'rushes' unpredictably.",
+        "quality": "blunder",
+        "feedback": "Useless paranoia. Mathematically (movement speed), it is impossible to encounter a T in the first few seconds at the CT spawn. You lose movement speed (knife vs weapon)."
+      },
+      {
+        "id": 3,
+        "text": "I walk silently the whole way to not give any info.",
+        "quality": "blunder",
+        "feedback": "Walking/shifting in a comfort zone wastes precious time to take crucial advanced positions."
+      },
+      {
+        "id": 4,
+        "text": "I run quickly towards my angle without looking at the radar or speaking.",
+        "quality": "good",
+        "feedback": "It's mechanical and effective, but you waste a strategic window of opportunity (analysis, communication) that differentiates good players from excellent ones."
+      }
+    ]
+  }
+]

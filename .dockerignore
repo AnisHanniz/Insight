@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+data
+.env.local
+Dockerfile
+.dockerignore
+README.md
+GEMINI.md
+CLAUDE.md
+*.log
+Dt42dMqXQAE2Ayo.jpg*

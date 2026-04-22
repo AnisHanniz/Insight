@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker --version)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"--exit $?--\")",
+      "Bash(docker compose *)",
+      "Bash(curl -sS http://localhost:3000/api/packs)",
+      "Bash(curl -sS \"http://localhost:3000/api/scenarios?packId=2\")",
+      "Bash(apt list *)",
+      "Bash(sudo apt-get *)",
+      "Bash(python3 -c \"import pypdf; print\\('ok'\\)\")",
+      "Bash(python3 -c \"import PyPDF2; print\\('ok'\\)\")",
+      "Bash(python3 -c \"import pdfplumber; print\\('ok'\\)\")",
+      "Bash(pip3 install *)",
+      "Bash(python3 *)",
+      "Bash(python3 -c ' *)",
+      "Read(//tmp/**)",
+      "Bash(node *)",
+      "Bash(npm run *)",
+      "Bash(ngrok version *)",
+      "Bash(mkdir -p ~/bin)",
+      "Bash(wget -q \"https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz\" -O ngrok.tgz)",
+      "Bash(tar xzf *)",
+      "Bash(mv ngrok *)",
+      "Bash(~/bin/ngrok version *)",
+      "Bash(curl -s -o /dev/null -w \"status=%{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(git -C /home/nad/iqcs status)"
+    ]
+  }
+}

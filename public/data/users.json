@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "name": "Test User",
+    "email": "test@example.com",
+    "elo": 1000,
+    "role": "user",
+    "image": "",
+    "packsUnlocked": [],
+    "history": []
+  },
+  {
+    "id": "2",
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "elo": 1500,
+    "role": "admin",
+    "image": "",
+    "packsUnlocked": ["iem-rio-2026"],
+    "history": []
+  }
+]
