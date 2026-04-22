@@ -34,7 +34,7 @@ async function handler(
             email: user.email, 
             role: user.role, 
             elo: user.elo, 
-            packsUnlocked: user.packsUnlocked 
+            packsUnlocked: user.packsUnlocked as string[] 
           };
         }
         
