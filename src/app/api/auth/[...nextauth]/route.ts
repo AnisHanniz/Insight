@@ -83,7 +83,7 @@ async function handler(
           if (dbUser) {
             token.role = dbUser.role;
             token.elo = dbUser.elo;
-            token.packsUnlocked = dbUser.packsUnlocked;
+            token.packsUnlocked = dbUser.packsUnlocked as string[];
           }
         }
         return token
