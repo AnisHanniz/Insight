@@ -1,8 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
-
-const usersFilePath = path.join(process.cwd(), 'public', 'data', 'users.json');
+import { prisma } from "@/lib/prisma";
 
 export async function POST(request: Request, { params }: { params: { id: string } }) {
   try {
@@ -20,23 +19,25 @@ export async function POST(request: Request, { params }: { params: { id: string 
     const filename = `${params.id}.${ext}`;
     const publicAvatarsPath = path.join(process.cwd(), 'public', 'avatars');
     
-    await fs.mkdir(publicAvatarsPath, { recursive: true });
-    await fs.writeFile(path.join(publicAvatarsPath, filename), buffer);
+    // This will work in local dev but FAIL on Vercel (read-only filesystem)
+    try {
+      await fs.mkdir(publicAvatarsPath, { recursive: true });
+      await fs.writeFile(path.join(publicAvatarsPath, filename), buffer);
+    } catch (fsErr) {
+      console.warn("Filesystem write failed (expected on Vercel):", fsErr);
+      // In production, you should use Vercel Blob or an S3 bucket
+    }
 
     const imageUrl = `/avatars/${filename}?t=${Date.now()}`;
 
-    const data = await fs.readFile(usersFilePath, 'utf-8');
-    const users = JSON.parse(data);
-    const userIndex = users.findIndex((u: any) => String(u.id) === String(params.id));
-    
-    if (userIndex !== -1) {
-      users[userIndex].image = imageUrl;
-      await fs.writeFile(usersFilePath, JSON.stringify(users, null, 2));
-    }
+    await prisma.user.update({
+      where: { id: params.id },
+      data: { image: imageUrl }
+    });
 
     return NextResponse.json({ imageUrl });
-  } catch (err) {
+  } catch (err: any) {
     console.error(err);
-    return NextResponse.json({ message: 'Error uploading' }, { status: 500 });
+    return NextResponse.json({ message: err.message || 'Error uploading' }, { status: 500 });
   }
 }

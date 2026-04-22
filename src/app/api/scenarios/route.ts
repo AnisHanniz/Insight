@@ -1,54 +1,58 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
-import { Scenario } from '@/types/scenario';
-
-const scenariosFilePath = path.join(process.cwd(), 'public', 'data', 'scenarios.json');
-
-async function readScenarios(): Promise<Scenario[]> {
-  try {
-    const data = await fs.readFile(scenariosFilePath, 'utf-8');
-    return JSON.parse(data);
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      return [];
-    }
-    throw error;
-  }
-}
-
-async function writeScenarios(scenarios: any) {
-  await fs.writeFile(scenariosFilePath, JSON.stringify(scenarios, null, 2));
-}
+import { prisma } from "@/lib/prisma";
 
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const packId = searchParams.get('packId');
+  try {
+    const { searchParams } = new URL(request.url);
+    const packId = searchParams.get('packId');
 
-  const scenarios = await readScenarios();
-  if (!packId) {
+    const where = packId ? { packId } : {};
+    const scenarios = await prisma.scenario.findMany({
+      where,
+      orderBy: { id: 'asc' }
+    });
+
     return NextResponse.json(scenarios);
+  } catch (error: any) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
-  return NextResponse.json(scenarios.filter((s) => String(s.packId) === String(packId)));
 }
 
-function genScenarioId(existing: Scenario[]): string {
+function genScenarioId(): string {
   const base = Date.now().toString(36);
-  let id = `s-${base}`;
-  let n = 0;
-  const has = (i: string) => existing.some((s) => String(s.id) === i);
-  while (has(id)) {
-    n += 1;
-    id = `s-${base}-${n}`;
-  }
-  return id;
+  return `s-${base}`;
 }
 
 export async function POST(request: Request) {
-  const newScenario = await request.json();
-  const scenarios = await readScenarios();
-  newScenario.id = genScenarioId(scenarios);
-  scenarios.push(newScenario);
-  await writeScenarios(scenarios);
-  return NextResponse.json(newScenario, { status: 201 });
+  try {
+    const data = await request.json();
+    
+    if (!data.id) {
+      data.id = genScenarioId();
+    }
+
+    const newScenario = await prisma.scenario.create({
+      data: {
+        id: data.id,
+        packId: data.packId,
+        title: data.title,
+        description: data.description,
+        map: data.map || 'Any',
+        image: data.image || null,
+        videoUrl: data.video || data.videoUrl || null,
+        theme: data.theme,
+        subcategory: data.subcategory,
+        overlay: data.overlay || null,
+        macro: data.macro || {},
+        micro: data.micro || {},
+        communication: data.communication || {},
+        options: data.options || []
+      }
+    });
+
+    return NextResponse.json(newScenario, { status: 201 });
+  } catch (error: any) {
+    console.error("Error creating scenario:", error);
+    return NextResponse.json({ message: error.message }, { status: 500 });
+  }
 }

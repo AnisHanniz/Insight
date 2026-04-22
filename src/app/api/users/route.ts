@@ -1,35 +1,33 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
+import { prisma } from "@/lib/prisma";
 
-const usersFilePath = path.join(process.cwd(), 'public', 'data', 'users.json');
-
-async function readUsers() {
+export async function GET() {
   try {
-    const data = await fs.readFile(usersFilePath, 'utf-8');
-    return JSON.parse(data);
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      return [];
-    }
-    throw error;
+    const users = await prisma.user.findMany({
+      orderBy: { id: 'asc' }
+    });
+    return NextResponse.json(users);
+  } catch (error: any) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
 }
 
-async function writeUsers(users: any) {
-  await fs.writeFile(usersFilePath, JSON.stringify(users, null, 2));
-}
-
-export async function GET() {
-  const users = await readUsers();
-  return NextResponse.json(users);
-}
-
 export async function POST(request: Request) {
-  const newUser = await request.json();
-  const users = await readUsers();
-  newUser.id = (users.length > 0 ? Math.max(...users.map((u: any) => parseInt(u.id, 10))) + 1 : 1).toString();
-  users.push(newUser);
-  await writeUsers(users);
-  return NextResponse.json(newUser, { status: 201 });
+  try {
+    const data = await request.json();
+    const newUser = await prisma.user.create({
+      data: {
+        name: data.name,
+        email: data.email,
+        role: data.role || 'user',
+        elo: data.elo || 1000,
+        image: data.image || null,
+        packsUnlocked: data.packsUnlocked || [],
+        history: data.history || []
+      }
+    });
+    return NextResponse.json(newUser, { status: 201 });
+  } catch (error: any) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
+  }
 }

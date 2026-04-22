@@ -3,6 +3,7 @@ import Steam from 'next-auth-steam'
 import type { NextRequest } from 'next/server'
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
+import { prisma } from "@/lib/prisma";
 
 async function handler(
   req: NextRequest,
@@ -15,21 +16,26 @@ async function handler(
         email: { label: "Email", type: "text" },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials, req) {
-        if (!credentials) {
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials?.password) {
           return null;
         }
-        const fs = require('fs/promises');
-        const path = require('path');
-        const usersPath = path.join(process.cwd(), 'public', 'data', 'users.json');
-        const usersData = await fs.readFile(usersPath, 'utf-8');
-        const users = JSON.parse(usersData);
 
-        const user = users.find((u: any) => u.email === credentials.email);
+        const user = await prisma.user.findUnique({
+          where: { email: credentials.email }
+        });
 
         // We check password as 'password' for all test users since it's mock
+        // In real app, use bcrypt to compare
         if (user && "password" === credentials.password) {
-          return { id: user.id, name: user.name, email: user.email, role: user.role, elo: user.elo, packsUnlocked: user.packsUnlocked };
+          return { 
+            id: user.id, 
+            name: user.name, 
+            email: user.email, 
+            role: user.role, 
+            elo: user.elo, 
+            packsUnlocked: user.packsUnlocked 
+          };
         }
         
         return null;
@@ -58,19 +64,31 @@ async function handler(
   return NextAuth(req, res, {
     providers,
     callbacks: {
-      jwt({ token, user, account, profile }) {
+      async jwt({ token, user, account, profile }) {
         if (account?.provider === 'steam') {
           token.steam = profile
         }
+        
         if (user) {
           token.id = user.id;
           token.role = (user as any).role;
           token.elo = (user as any).elo;
           token.packsUnlocked = (user as any).packsUnlocked;
+        } else if (token.id) {
+          // Fetch latest data from DB to ensure session stays fresh (especially ELO)
+          const dbUser = await prisma.user.findUnique({
+            where: { id: token.id as string },
+            select: { elo: true, role: true, packsUnlocked: true }
+          });
+          if (dbUser) {
+            token.role = dbUser.role;
+            token.elo = dbUser.elo;
+            token.packsUnlocked = dbUser.packsUnlocked;
+          }
         }
         return token
       },
-      session({ session, token }) {
+      async session({ session, token }) {
         if ('steam' in token) {
           // @ts-expect-error
           session.user.steam = token.steam

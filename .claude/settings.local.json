@@ -26,7 +26,9 @@
       "Bash(~/bin/ngrok version *)",
       "Bash(curl -s -o /dev/null -w \"status=%{http_code}\\\\n\" http://localhost:3000)",
       "Bash(echo \"exit=$?\")",
-      "Bash(git -C /home/nad/iqcs status)"
+      "Bash(git -C /home/nad/iqcs status)",
+      "Bash(git -C /home/nad/iqcs remote -v)",
+      "Bash(git -C /home/nad/iqcs log --oneline -5)"
     ]
   }
 }

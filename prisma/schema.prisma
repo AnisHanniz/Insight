@@ -10,15 +10,19 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  name      String?
-  email     String?  @unique
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
   emailVerified DateTime?
-  image     String?
-  role      String   @default("user")
-  packs     Pack[]
-  accounts  Account[]
-  sessions  Session[]
+  image         String?
+  password      String?
+  role          String    @default("user")
+  elo           Int       @default(1000)
+  packsUnlocked Json      @default("[]")
+  history       Json      @default("[]")
+  accounts      Account[]
+  sessions      Session[]
+  packsCreated  Pack[]    @relation("PackCreator")
 }
 
 model Account {
@@ -57,27 +61,40 @@ model VerificationToken {
 }
 
 model Pack {
-  id        String   @id @default(cuid())
-  name      String
-  tier      Int
-  price     String
-  imageUrl  String
-  creator   User     @relation(fields: [creatorId], references: [id])
-  creatorId String
-  scenarios Scenario[]
+  id          String     @id
+  name        String
+  theme       String     @default("training")
+  subtitle    String?
+  description String?    @db.Text
+  tier        Int        @default(1)
+  difficulty  String     @default("intermediate")
+  price       String     @default("Free")
+  imageUrl    String?
+  isPremium   Boolean    @default(false)
+  tournament  String?
+  creator     User?      @relation("PackCreator", fields: [creatorId], references: [id])
+  creatorId   String?
+  scenarios   Scenario[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @default(now()) @updatedAt
 }
 
 model Scenario {
-  id            String   @id @default(cuid())
+  id            String   @id
+  packId        String
+  pack          Pack     @relation(fields: [packId], references: [id], onDelete: Cascade)
+  theme         String?
+  subcategory   String?
+  map           String   @default("Any")
   title         String
-  map           String
-  description   String
+  description   String   @db.Text
   image         String?
+  videoUrl      String?
   overlay       Json?
   macro         Json
   micro         Json
   communication Json
   options       Json
-  pack          Pack     @relation(fields: [packId], references: [id])
-  packId        String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now()) @updatedAt
 }

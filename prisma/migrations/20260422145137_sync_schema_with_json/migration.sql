@@ -1,0 +1,40 @@
+-- DropForeignKey
+ALTER TABLE "Pack" DROP CONSTRAINT "Pack_creatorId_fkey";
+
+-- DropForeignKey
+ALTER TABLE "Scenario" DROP CONSTRAINT "Scenario_packId_fkey";
+
+-- AlterTable
+ALTER TABLE "Pack" ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ADD COLUMN     "description" TEXT,
+ADD COLUMN     "difficulty" TEXT NOT NULL DEFAULT 'intermediate',
+ADD COLUMN     "isPremium" BOOLEAN NOT NULL DEFAULT false,
+ADD COLUMN     "subtitle" TEXT,
+ADD COLUMN     "theme" TEXT NOT NULL DEFAULT 'training',
+ADD COLUMN     "tournament" TEXT,
+ADD COLUMN     "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ALTER COLUMN "tier" SET DEFAULT 1,
+ALTER COLUMN "price" SET DEFAULT 'Free',
+ALTER COLUMN "imageUrl" DROP NOT NULL,
+ALTER COLUMN "creatorId" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "Scenario" ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ADD COLUMN     "overlay" JSONB,
+ADD COLUMN     "subcategory" TEXT,
+ADD COLUMN     "theme" TEXT,
+ADD COLUMN     "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ADD COLUMN     "videoUrl" TEXT,
+ALTER COLUMN "map" SET DEFAULT 'Any';
+
+-- AlterTable
+ALTER TABLE "User" ADD COLUMN     "elo" INTEGER NOT NULL DEFAULT 1000,
+ADD COLUMN     "history" JSONB NOT NULL DEFAULT '[]',
+ADD COLUMN     "packsUnlocked" JSONB NOT NULL DEFAULT '[]',
+ADD COLUMN     "password" TEXT;
+
+-- AddForeignKey
+ALTER TABLE "Pack" ADD CONSTRAINT "Pack_creatorId_fkey" FOREIGN KEY ("creatorId") REFERENCES "User"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Scenario" ADD CONSTRAINT "Scenario_packId_fkey" FOREIGN KEY ("packId") REFERENCES "Pack"("id") ON DELETE CASCADE ON UPDATE CASCADE;

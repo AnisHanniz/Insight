@@ -1,59 +1,63 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
-
-const packsFilePath = path.join(process.cwd(), 'public', 'data', 'packs.json');
-
-async function readPacks() {
-  try {
-    const data = await fs.readFile(packsFilePath, 'utf-8');
-    return JSON.parse(data);
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      return [];
-    }
-    throw error;
-  }
-}
-
-async function writePacks(packs: any) {
-  await fs.writeFile(packsFilePath, JSON.stringify(packs, null, 2));
-}
+import { prisma } from "@/lib/prisma";
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {
-  const packs = await readPacks();
-  const pack = packs.find((p: any) => String(p.id) === String(params.id));
-  if (!pack) {
-    return NextResponse.json({ message: 'Pack not found' }, { status: 404 });
+  try {
+    const pack = await prisma.pack.findUnique({
+      where: { id: params.id },
+      include: {
+        scenarios: {
+          select: { id: true }
+        }
+      }
+    });
+
+    if (!pack) {
+      return NextResponse.json({ message: 'Pack not found' }, { status: 404 });
+    }
+
+    // Include scenarioIds for backward compatibility
+    const formattedPack = {
+      ...pack,
+      scenarioIds: pack.scenarios.map(s => s.id)
+    };
+
+    return NextResponse.json(formattedPack);
+  } catch (error: any) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
-  return NextResponse.json(pack);
 }
 
 export async function PUT(request: Request, { params }: { params: { id: string } }) {
-  const updatedPackData = await request.json();
-  const packs = await readPacks();
-  const packIndex = packs.findIndex((p: any) => String(p.id) === String(params.id));
+  try {
+    const data = await request.json();
+    
+    // Remove relation fields if they exist in payload
+    const { scenarios, scenarioIds, ...updateData } = data;
 
-  if (packIndex === -1) {
-    return NextResponse.json({ message: 'Pack not found' }, { status: 404 });
+    const updatedPack = await prisma.pack.update({
+      where: { id: params.id },
+      data: {
+        ...updateData,
+        tier: data.tier ? parseInt(String(data.tier)) : undefined,
+      }
+    });
+
+    return NextResponse.json(updatedPack);
+  } catch (error: any) {
+    console.error("Error updating pack:", error);
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
-
-  packs[packIndex] = { ...packs[packIndex], ...updatedPackData };
-  await writePacks(packs);
-
-  return NextResponse.json(packs[packIndex]);
 }
 
 export async function DELETE(_request: Request, { params }: { params: { id: string } }) {
-  let packs = await readPacks();
-  const packIndex = packs.findIndex((p: any) => String(p.id) === String(params.id));
+  try {
+    await prisma.pack.delete({
+      where: { id: params.id }
+    });
 
-  if (packIndex === -1) {
-    return NextResponse.json({ message: 'Pack not found' }, { status: 404 });
+    return new NextResponse(null, { status: 204 });
+  } catch (error: any) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
-
-  packs.splice(packIndex, 1);
-  await writePacks(packs);
-
-  return new NextResponse(null, { status: 204 });
 }

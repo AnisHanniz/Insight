@@ -9,29 +9,35 @@ const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
-  const packCount = await prisma.pack.count();
-  const userCount = await prisma.user.count();
-  const scenarioCount = await prisma.scenario.count();
-  if (false) {
-    console.log('[seed] already populated, skipping');
-    return;
-  }
+  console.log('[seed] Starting seeding...');
 
   const usersData = JSON.parse(
     fs.readFileSync(path.join(process.cwd(), 'public/data/users.json'), 'utf-8')
   );
   for (const user of usersData) {
     await prisma.user.upsert({
-      where: { id: user.id.toString() },
-      update: {},
+      where: { email: user.email },
+      update: {
+        role: user.role,
+        elo: user.elo || 1000,
+        packsUnlocked: user.packsUnlocked || [],
+        history: user.history || [],
+        name: user.name,
+      },
       create: {
         id: user.id.toString(),
         name: user.name,
         email: user.email,
         role: user.role,
+        elo: user.elo || 1000,
+        packsUnlocked: user.packsUnlocked || [],
+        history: user.history || [],
       },
     });
   }
+
+  const adminUser = await prisma.user.findFirst({ where: { role: 'admin' } });
+  const defaultCreatorId = adminUser?.id;
 
   const packsData = JSON.parse(
     fs.readFileSync(path.join(process.cwd(), 'public/data/packs.json'), 'utf-8')
@@ -39,14 +45,31 @@ async function main() {
   for (const pack of packsData) {
     await prisma.pack.upsert({
       where: { id: pack.id.toString() },
-      update: {},
+      update: {
+        name: pack.name,
+        theme: pack.theme || 'training',
+        subtitle: pack.subtitle,
+        description: pack.description,
+        tier: pack.tier,
+        difficulty: pack.difficulty || 'intermediate',
+        price: pack.price,
+        imageUrl: pack.imageUrl || '',
+        isPremium: pack.isPremium || false,
+        tournament: pack.tournament,
+      },
       create: {
         id: pack.id.toString(),
         name: pack.name,
+        theme: pack.theme || 'training',
+        subtitle: pack.subtitle,
+        description: pack.description,
         tier: pack.tier,
+        difficulty: pack.difficulty || 'intermediate',
         price: pack.price,
-        imageUrl: pack.imageUrl ?? '',
-        creatorId: (pack.creatorId ?? '2').toString(),
+        imageUrl: pack.imageUrl || '',
+        isPremium: pack.isPremium || false,
+        tournament: pack.tournament,
+        creatorId: defaultCreatorId,
       },
     });
   }
@@ -58,23 +81,40 @@ async function main() {
     if (!scenario.packId) continue;
     await prisma.scenario.upsert({
       where: { id: scenario.id.toString() },
-      update: { image: scenario.image ?? null },
+      update: {
+        title: scenario.title,
+        description: scenario.description,
+        map: scenario.map || 'Any',
+        image: scenario.image || null,
+        videoUrl: scenario.video || null,
+        theme: scenario.theme,
+        subcategory: scenario.subcategory,
+        overlay: scenario.overlay || null,
+        macro: scenario.macro || {},
+        micro: scenario.micro || {},
+        communication: scenario.communication || {},
+        options: scenario.options || [],
+      },
       create: {
         id: scenario.id.toString(),
         packId: scenario.packId.toString(),
         title: scenario.title,
-        map: scenario.map ?? '',
         description: scenario.description,
-        image: scenario.image ?? null,
-        macro: scenario.macro ?? {},
-        micro: scenario.micro ?? {},
-        communication: scenario.communication ?? {},
-        options: scenario.options ?? [],
+        map: scenario.map || 'Any',
+        image: scenario.image || null,
+        videoUrl: scenario.video || null,
+        theme: scenario.theme,
+        subcategory: scenario.subcategory,
+        overlay: scenario.overlay || null,
+        macro: scenario.macro || {},
+        micro: scenario.micro || {},
+        communication: scenario.communication || {},
+        options: scenario.options || [],
       },
     });
   }
 
-  console.log('[seed] done');
+  console.log('[seed] Seeding done!');
 }
 
 main()
@@ -84,4 +124,5 @@ main()
   })
   .finally(async () => {
     await prisma.$disconnect();
+    await pool.end();
   });

@@ -1,60 +1,51 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
-import { Scenario } from '@/types/scenario';
-
-const scenariosFilePath = path.join(process.cwd(), 'public', 'data', 'scenarios.json');
-
-async function readScenarios(): Promise<Scenario[]> {
-  try {
-    const data = await fs.readFile(scenariosFilePath, 'utf-8');
-    return JSON.parse(data);
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      return [];
-    }
-    throw error;
-  }
-}
-
-async function writeScenarios(scenarios: any) {
-  await fs.writeFile(scenariosFilePath, JSON.stringify(scenarios, null, 2));
-}
+import { prisma } from "@/lib/prisma";
 
 export async function GET(_request: Request, { params }: { params: { id: string } }) {
-  const scenarios = await readScenarios();
-  const scenario = scenarios.find((s) => String(s.id) === String(params.id));
-  if (!scenario) {
-    return NextResponse.json({ message: 'Scenario not found' }, { status: 404 });
+  try {
+    const scenario = await prisma.scenario.findUnique({
+      where: { id: params.id }
+    });
+
+    if (!scenario) {
+      return NextResponse.json({ message: 'Scenario not found' }, { status: 404 });
+    }
+    return NextResponse.json(scenario);
+  } catch (error: any) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
-  return NextResponse.json(scenario);
 }
 
 export async function PUT(request: Request, { params }: { params: { id: string } }) {
-  const updatedScenarioData = await request.json();
-  const scenarios = await readScenarios();
-  const scenarioIndex = scenarios.findIndex((s) => String(s.id) === String(params.id));
+  try {
+    const data = await request.json();
+    
+    // Remove relation fields if they exist in payload
+    const { pack, ...updateData } = data;
 
-  if (scenarioIndex === -1) {
-    return NextResponse.json({ message: 'Scenario not found' }, { status: 404 });
+    const updatedScenario = await prisma.scenario.update({
+      where: { id: params.id },
+      data: {
+        ...updateData,
+        videoUrl: data.video || data.videoUrl || undefined
+      }
+    });
+
+    return NextResponse.json(updatedScenario);
+  } catch (error: any) {
+    console.error("Error updating scenario:", error);
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
-
-  scenarios[scenarioIndex] = { ...scenarios[scenarioIndex], ...updatedScenarioData, id: scenarios[scenarioIndex].id };
-  await writeScenarios(scenarios);
-
-  return NextResponse.json(scenarios[scenarioIndex]);
 }
 
 export async function DELETE(_request: Request, { params }: { params: { id: string } }) {
-  const scenarios = await readScenarios();
-  const scenarioIndex = scenarios.findIndex((s) => String(s.id) === String(params.id));
+  try {
+    await prisma.scenario.delete({
+      where: { id: params.id }
+    });
 
-  if (scenarioIndex === -1) {
-    return NextResponse.json({ message: 'Scenario not found' }, { status: 404 });
+    return new NextResponse(null, { status: 204 });
+  } catch (error: any) {
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
-
-  scenarios.splice(scenarioIndex, 1);
-  await writeScenarios(scenarios);
-
-  return new NextResponse(null, { status: 204 });
 }
