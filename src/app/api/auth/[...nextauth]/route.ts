@@ -1,15 +1,14 @@
+export const dynamic = 'force-dynamic'
+
 import NextAuth from 'next-auth'
 import Steam from 'next-auth-steam'
 import type { NextRequest } from 'next/server'
 import GoogleProvider from "next-auth/providers/google";
 import { authOptions } from "@/lib/auth";
 
-// Force this route to be dynamic, preventing build-time errors when DB is not available
-export const dynamic = 'force-dynamic'
-
 async function handler(
   req: NextRequest,
-  res: any
+  context: { params: { nextauth: string[] } }
 ) {
   const providers = [...authOptions.providers];
 
@@ -32,7 +31,7 @@ async function handler(
   }
 
   // @ts-ignore
-  return NextAuth(req, res, {
+  return NextAuth(req, context, {
     ...authOptions,
     providers
   })
