@@ -2,15 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import type { Scenario } from "@/types/scenario";
-import type { Pack } from "@/types/pack";
 import ScenarioView from "@/components/ScenarioView";
 import { THEMES } from "@/lib/themes";
 
 export default function PlayPage() {
+  const { data: session } = useSession();
   const [scenarios, setScenarios] = useState<Scenario[]>([]);
-  const [pack, setPack] = useState<Pack | null>(null);
+  const [pack, setPack] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const params = useParams();
   const { id: packId } = params;
@@ -36,7 +37,27 @@ export default function PlayPage() {
     return <div className="container mx-auto p-8 text-white">Pack not found.</div>;
   }
 
-  const t = THEMES[pack.theme] ?? THEMES.training;
+  const owned = (session?.user?.packsUnlocked as string[] | undefined)?.includes(pack.id);
+  const ownCreator = session?.user?.id === pack.creatorId;
+  const locked = pack.isCommunity && pack.status === "approved" && !owned && !ownCreator;
+  if (locked) {
+    return (
+      <div className="container mx-auto p-8 text-white max-w-2xl">
+        <h1 className="text-3xl font-extrabold">{pack.name}</h1>
+        <p className="text-gray-300 mt-3">
+          Community pack — unlock to play.
+        </p>
+        <Link
+          href={`/community/${pack.id}`}
+          className="inline-block mt-6 bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold px-5 py-2 rounded-lg tracking-wide"
+        >
+          Unlock for {pack.priceIP?.toLocaleString()} IP
+        </Link>
+      </div>
+    );
+  }
+
+  const t = THEMES[pack.theme as keyof typeof THEMES] ?? THEMES.training;
 
   if (scenarios.length === 0) {
     return (
