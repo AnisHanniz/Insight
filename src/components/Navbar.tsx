@@ -55,6 +55,14 @@ export default function Navbar() {
               </Link>
             </>
           )}
+          {(isReviewer && !isAdmin) && (
+            <Link
+              href="/admin/moderation"
+              className="text-yellow-300 hover:text-yellow-200 transition font-extrabold"
+            >
+              Moderation
+            </Link>
+          )}
           {isAdmin && (
             <div className="relative group py-2">
               <span className="text-gray-300 group-hover:text-white transition cursor-pointer">
@@ -79,6 +87,12 @@ export default function Navbar() {
                     className="px-4 py-3 text-white hover:bg-white/10 transition-colors"
                   >
                     Manage Users
+                  </Link>
+                  <Link
+                    href="/admin/moderation"
+                    className="px-4 py-3 text-white hover:bg-white/10 transition-colors"
+                  >
+                    Moderation
                   </Link>
                 </div>
               </div>

@@ -44,6 +44,7 @@ export default function UserForm({ user, onSave, onCancel }: { user?: any, onSav
         <label htmlFor="role" className="block text-sm font-medium text-gray-300">Role</label>
         <select name="role" id="role" value={formData.role} onChange={handleChange} className="mt-1 block w-full p-2 rounded bg-gray-600 text-white border border-gray-500">
           <option value="user">User</option>
+          <option value="reviewer">Reviewer</option>
           <option value="admin">Admin</option>
         </select>
       </div>
