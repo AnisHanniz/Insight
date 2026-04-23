@@ -33,13 +33,27 @@ export default function Navbar() {
           >
             Premium
           </Link>
+          <Link
+            href="/community"
+            className="text-gray-300 hover:text-white transition"
+          >
+            Community
+          </Link>
           {status === "authenticated" && (
-            <Link
-              href="/profile"
-              className="text-gray-300 hover:text-white transition"
-            >
-              Profile
-            </Link>
+            <>
+              <Link
+                href="/create"
+                className="text-gray-300 hover:text-white transition"
+              >
+                Create
+              </Link>
+              <Link
+                href="/profile"
+                className="text-gray-300 hover:text-white transition"
+              >
+                Profile
+              </Link>
+            </>
           )}
           {isAdmin && (
             <div className="relative group py-2">
