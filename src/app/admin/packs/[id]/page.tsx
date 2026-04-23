@@ -97,7 +97,7 @@ export default function ManagePackContentPage() {
       if (pack) {
         const updatedPack = {
           ...pack,
-          scenarioIds: pack.scenarioIds.filter(id => id !== scenarioId),
+          scenarioIds: (pack.scenarioIds ?? []).filter(id => id !== scenarioId),
         };
         await fetch(`/api/packs/${pack.id}`, {
           method: 'PUT',

@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
-import { useState } from "react";
 
 export default function Navbar() {
   const { data: session, status } = useSession();
-  const [isAdminMenuOpen, setIsAdminMenuOpen] = useState(false);
   const isAdmin = session?.user?.role === "admin";
+  const isReviewer = session?.user?.role === "reviewer";
 
   return (
     <nav className="sticky top-0 z-40 bg-secondary/80 backdrop-blur border-b border-white/5 text-gray-light">
@@ -75,8 +74,20 @@ export default function Navbar() {
         <div className="flex items-center space-x-3">
           {status === "authenticated" ? (
             <>
+              <Link
+                href="/wallet"
+                className="hidden sm:inline-flex items-center gap-1.5 bg-primary/20 hover:bg-primary/30 border border-primary/40 text-white font-bold py-1.5 px-3 rounded-lg text-xs tracking-wide transition"
+                title="Wallet"
+              >
+                <span className="text-yellow-300">◆</span>
+                <span className="font-mono">{(session.user?.balance ?? 0).toLocaleString("en-US")}</span>
+                <span className="text-gray-300">IP</span>
+              </Link>
               <span className="hidden sm:inline text-sm text-gray-400">
                 {session.user?.name}
+                {session.user?.creatorBadge && (
+                  <span className="ml-1 text-yellow-400" title="Verified creator">★</span>
+                )}
               </span>
               <button
                 onClick={() => signOut()}

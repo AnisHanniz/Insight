@@ -7,9 +7,12 @@ export default withAuth(
     const token = req.nextauth.token;
     const path = req.nextUrl.pathname;
 
-    // If the user is trying to access the admin area
-    if (path.startsWith("/admin")) {
-      // If the user is not an admin, redirect to the home page
+    // Reviewer role has access only to moderation. Admin has access to all.
+    if (path.startsWith("/admin/moderation")) {
+      if (token?.role !== "admin" && token?.role !== "reviewer") {
+        return NextResponse.redirect(new URL("/", req.url));
+      }
+    } else if (path.startsWith("/admin")) {
       if (token?.role !== "admin") {
         return NextResponse.redirect(new URL("/", req.url));
       }
@@ -24,5 +27,5 @@ export default withAuth(
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/admin/:path*", "/profile"], // Protect admin and profile pages
+  matcher: ["/admin/:path*", "/profile", "/wallet", "/create/:path*"], // Protect admin, profile, wallet, create pages
 };
