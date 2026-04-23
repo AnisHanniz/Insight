@@ -138,7 +138,12 @@ export default function ProfilePage() {
                   </div>
                 ) : (
                   <>
-                    <h1 className="text-3xl font-extrabold">{user.name}</h1>
+                    <h1 className="text-3xl font-extrabold flex items-center gap-2">
+                      {user.name}
+                      {user.creatorBadge && (
+                        <span className="text-yellow-400 text-2xl" title="Verified Creator">★</span>
+                      )}
+                    </h1>
                     <button onClick={() => setIsEditing(true)} className="text-gray-400 hover:text-white transition" aria-label="Edit Profile">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
@@ -147,7 +152,10 @@ export default function ProfilePage() {
                   </>
                 )}
               </div>
-              <p className="text-gray-400 text-sm mt-1">{user.role === 'admin' ? 'Administrator' : 'Player'}</p>
+              <p className="text-gray-400 text-sm mt-1">
+                {user.role === 'admin' ? 'Administrator' : user.role === 'reviewer' ? 'Reviewer' : 'Player'}
+                {user.creatorBadge && <span className="ml-2 text-yellow-300 font-bold">· Verified Creator</span>}
+              </p>
             </div>
 
             <div className="flex items-center gap-4 mb-2">
