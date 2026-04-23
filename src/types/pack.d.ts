@@ -8,6 +8,8 @@ export type Theme =
   | "mental"
   | "decision";
 
+export type PackStatus = "draft" | "pending" | "approved" | "rejected";
+
 export interface Pack {
   id: string;
   name: string;
@@ -19,7 +21,21 @@ export interface Pack {
   tier: number;
   price: string;
   imageUrl: string;
-  scenarioIds: string[];
+  scenarioIds?: string[];
   tournament?: string;
   isPremium?: boolean;
+  isCommunity?: boolean;
+  status?: PackStatus;
+  priceIP?: number | null;
+  creatorShareIP?: number | null;
+  rejectionReason?: string | null;
+  creatorId?: string | null;
+  creator?: {
+    id: string;
+    name?: string | null;
+    image?: string | null;
+    creatorBadge?: boolean;
+  } | null;
+  submittedAt?: string | null;
+  approvedAt?: string | null;
 }

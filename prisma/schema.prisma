@@ -10,19 +10,25 @@ datasource db {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  password      String?
-  role          String    @default("user")
-  elo           Int       @default(1000)
-  packsUnlocked Json      @default("[]")
-  history       Json      @default("[]")
-  accounts      Account[]
-  sessions      Session[]
-  packsCreated  Pack[]    @relation("PackCreator")
+  id               String         @id @default(cuid())
+  name             String?
+  email            String?        @unique
+  emailVerified    DateTime?
+  image            String?
+  password         String?
+  role             String         @default("user")
+  elo              Int            @default(1000)
+  packsUnlocked    Json           @default("[]")
+  history          Json           @default("[]")
+  balance          Int            @default(0)
+  creatorBadge     Boolean        @default(false)
+  stripeCustomerId String?
+  accounts         Account[]
+  sessions         Session[]
+  packsCreated     Pack[]         @relation("PackCreator")
+  transactions     Transaction[]
+  withdrawals      Withdrawal[]
+  purchases        PackPurchase[]
 }
 
 model Account {
@@ -61,22 +67,30 @@ model VerificationToken {
 }
 
 model Pack {
-  id          String     @id
-  name        String
-  theme       String     @default("training")
-  subtitle    String?
-  description String?    @db.Text
-  tier        Int        @default(1)
-  difficulty  String     @default("intermediate")
-  price       String     @default("Free")
-  imageUrl    String?
-  isPremium   Boolean    @default(false)
-  tournament  String?
-  creator     User?      @relation("PackCreator", fields: [creatorId], references: [id])
-  creatorId   String?
-  scenarios   Scenario[]
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @default(now()) @updatedAt
+  id              String         @id
+  name            String
+  theme           String         @default("training")
+  subtitle        String?
+  description     String?        @db.Text
+  tier            Int            @default(1)
+  difficulty      String         @default("intermediate")
+  price           String         @default("Free")
+  imageUrl        String?
+  isPremium       Boolean        @default(false)
+  tournament      String?
+  creator         User?          @relation("PackCreator", fields: [creatorId], references: [id])
+  creatorId       String?
+  isCommunity     Boolean        @default(false)
+  status          String         @default("approved")
+  priceIP         Int?
+  creatorShareIP  Int?
+  rejectionReason String?
+  submittedAt     DateTime?
+  approvedAt      DateTime?
+  scenarios       Scenario[]
+  purchases       PackPurchase[]
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @default(now()) @updatedAt
 }
 
 model Scenario {
@@ -97,4 +111,48 @@ model Scenario {
   options       Json
   createdAt     DateTime @default(now())
   updatedAt     DateTime @default(now()) @updatedAt
+}
+
+model Transaction {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      String
+  amountIP  Int
+  status    String   @default("completed")
+  stripeRef String?
+  packId    String?
+  meta      Json?
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model Withdrawal {
+  id            String    @id @default(cuid())
+  userId        String
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amountIP      Int
+  amountUSD     Float
+  status        String    @default("pending")
+  payoutMethod  String?
+  payoutDetails Json?
+  rejectionReason String?
+  createdAt     DateTime  @default(now())
+  paidAt        DateTime?
+
+  @@index([userId, createdAt])
+}
+
+model PackPurchase {
+  id        String   @id @default(cuid())
+  userId    String
+  packId    String
+  amountIP  Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pack      Pack     @relation(fields: [packId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, packId])
+  @@index([packId])
 }

@@ -28,7 +28,9 @@
       "Bash(echo \"exit=$?\")",
       "Bash(git -C /home/nad/iqcs status)",
       "Bash(git -C /home/nad/iqcs remote -v)",
-      "Bash(git -C /home/nad/iqcs log --oneline -5)"
+      "Bash(git -C /home/nad/iqcs log --oneline -5)",
+      "Bash(npx prisma *)",
+      "Bash(git add *)"
     ]
   }
 }

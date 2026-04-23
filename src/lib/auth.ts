@@ -20,13 +20,15 @@ export const authOptions: NextAuthOptions = {
         });
 
         if (user && "password" === credentials.password) {
-          return { 
-            id: user.id, 
-            name: user.name, 
-            email: user.email, 
-            role: user.role, 
-            elo: user.elo, 
-            packsUnlocked: user.packsUnlocked as string[] 
+          return {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            role: user.role,
+            elo: user.elo,
+            packsUnlocked: user.packsUnlocked as string[],
+            balance: user.balance,
+            creatorBadge: user.creatorBadge,
           };
         }
         
@@ -45,15 +47,19 @@ export const authOptions: NextAuthOptions = {
         token.role = (user as any).role;
         token.elo = (user as any).elo;
         token.packsUnlocked = (user as any).packsUnlocked;
+        token.balance = (user as any).balance;
+        token.creatorBadge = (user as any).creatorBadge;
       } else if (token.id) {
         const dbUser = await prisma.user.findUnique({
           where: { id: token.id as string },
-          select: { elo: true, role: true, packsUnlocked: true }
+          select: { elo: true, role: true, packsUnlocked: true, balance: true, creatorBadge: true }
         });
         if (dbUser) {
           token.role = dbUser.role;
           token.elo = dbUser.elo;
           token.packsUnlocked = dbUser.packsUnlocked as string[];
+          token.balance = dbUser.balance;
+          token.creatorBadge = dbUser.creatorBadge;
         }
       }
       return token
@@ -68,6 +74,8 @@ export const authOptions: NextAuthOptions = {
         (session.user as any).role = token.role;
         (session.user as any).elo = token.elo;
         (session.user as any).packsUnlocked = token.packsUnlocked;
+        (session.user as any).balance = token.balance;
+        (session.user as any).creatorBadge = token.creatorBadge;
       }
       return session
     },

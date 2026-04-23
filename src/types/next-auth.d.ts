@@ -8,6 +8,8 @@ declare module "next-auth" {
       role?: string;
       elo?: number;
       packsUnlocked?: string[];
+      balance?: number;
+      creatorBadge?: boolean;
     } & DefaultSession["user"];
   }
 
@@ -15,6 +17,8 @@ declare module "next-auth" {
     role?: string;
     elo?: number;
     packsUnlocked?: string[];
+    balance?: number;
+    creatorBadge?: boolean;
   }
 }
 
@@ -24,5 +28,7 @@ declare module "next-auth/jwt" {
     role?: string;
     elo?: number;
     packsUnlocked?: string[];
+    balance?: number;
+    creatorBadge?: boolean;
   }
 }
