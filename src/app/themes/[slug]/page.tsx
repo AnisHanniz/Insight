@@ -78,9 +78,11 @@ export default async function ThemePage({
                 className="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-6 transition"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className={`text-xs font-bold px-2.5 py-1 rounded ${t.badge}`}>
-                    Tier {p.tier}
-                  </span>
+                  {p.difficulty && (
+                    <span className={`text-xs font-bold px-2.5 py-1 rounded ${t.badge} capitalize`}>
+                      {p.difficulty}
+                    </span>
+                  )}
                   <span className="text-sm font-bold text-gray-400">
                     {p.price}
                   </span>

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-type Pack = { id: string; name: string; tier: number; scenarioIds?: string[] };
+type Pack = { id: string; name: string; difficulty?: string; scenarioIds?: string[] };
 type User = { id: string };
 
 export default function AdminDashboard() {
@@ -32,8 +32,9 @@ export default function AdminDashboard() {
     load();
   }, []);
 
-  const tierCounts = packs.reduce<Record<number, number>>((acc, p) => {
-    acc[p.tier] = (acc[p.tier] ?? 0) + 1;
+  const difficultyCounts = packs.reduce<Record<string, number>>((acc, p) => {
+    const d = p.difficulty ?? "intermediate";
+    acc[d] = (acc[d] ?? 0) + 1;
     return acc;
   }, {});
 
@@ -49,7 +50,7 @@ export default function AdminDashboard() {
           <h2 className="text-xl font-bold text-blue-400 mb-2">Packs</h2>
           <p className="text-3xl font-bold text-white">{loading ? "…" : packs.length}</p>
           <p className="text-gray-400 text-sm mt-1">
-            Tier 1: {tierCounts[1] ?? 0} · Tier 2: {tierCounts[2] ?? 0} · Tier 3: {tierCounts[3] ?? 0}
+            Beginner: {difficultyCounts["beginner"] ?? 0} · Intermediate: {difficultyCounts["intermediate"] ?? 0} · Advanced: {difficultyCounts["advanced"] ?? 0}
           </p>
         </Link>
         <div className="bg-gray-800 p-6 rounded-lg">

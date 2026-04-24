@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #0d0f14;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 168, 232, 0.12), transparent),
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-size: 100% 100%, 28px 28px;
+  background-attachment: local, local;
+  min-height: 100vh;
+}

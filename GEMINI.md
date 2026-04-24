@@ -231,6 +231,80 @@ Les routes JSON (`POST/PUT /api/scenarios/[id]`) font déjà un spread du payloa
   - Le bouton "More packs" à la fin d'un scénario (`ScenarioView.tsx`) redirige vers `/fundamentals`.
   - Suppression de l'ancienne route index `/packs` au profit de la structure segmentée.
 
+## Avancement (Session 10 - 2026-04-24) — Mode Bolt, ELO admin fix, gates ELO
+
+### 1. Mode Bolt (`/bolt`) — ex-Defuse renommé
+
+- **Renommage complet** : `DefuseView` → `BoltView`, route `/defuse` → `/bolt`, `packId: "defuse"` → `packId: "bolt"`, icône navbar changée (⚡ jaune au lieu de 🕐 rouge).
+- **Navbar** : lien "Bolt" avec icône éclair jaune.
+
+### 2. Correction ELO admin
+
+- **Bug** : `handleChange` dans `UserForm.tsx` retournait toujours des strings (`e.target.value`), donc le champ ELO envoyait `"1200"` au lieu de `1200`. Prisma `Int` rejetait silencieusement.
+- **Fix** : détection `type === "number"` → `parseInt(value, 10)`. Double sécurité dans l'API `PUT /api/users/[id]` : `elo: parseInt(String(data.elo), 10)`.
+
+### 3. Gates ELO sur la difficulté (Marathon & Bolt)
+
+- **`src/lib/eloGate.ts`** : utilitaire partagé. Seuils : Easy verrouillé au-dessus de 1299 ELO, Hard verrouillé en-dessous de 1100 ELO.
+- **Marathon** : ajout d'un sélecteur de difficulté (Easy/Medium/Hard) mappé sur `beginner/intermediate/advanced` pour le facteur ELO. Les cartes verrouillées sont grises avec icône 🔒 et message (ex. "Reach 1100 ELO to unlock"). L'ELO actuel est affiché sous le sélecteur.
+- **Bolt** : même système. `useEffect` auto-sélectionne la difficulté valide quand l'ELO de la session est chargé.
+- **Règle** : ELO de départ = 1000 → Easy + Medium disponibles, Hard verrouillé. À partir de 1100 → tout déverrouillé. À partir de 1300 → Easy verrouillé.
+
+### 4. Correction build Docker
+
+- **Erreur** : `DefuseView.tsx:260` — apostrophe non échappée `TIME'S UP` → `TIME&apos;S UP`. Seule vraie erreur ESLint (pas un warning) qui faisait échouer `next build`.
+
+## Avancement (Session 9 - 2026-04-24) — UX Compact, Marathon & ELO par qualité
+
+### 1. Refonte UX/UI — Compacité & Modals
+
+- **Suppression du système de Tier** : Le badge `Tier {n}` a été retiré de toutes les pages (Fundamentals, Premium, Packs, Themes, Admin). Remplacé par le badge `difficulty` (Beginner / Intermediate / Advanced) partout. Le champ `tier` est conservé en base pour rétro-compatibilité mais n'est plus affiché ni saisi.
+- **PackForm élargi** : La modal d'édition de pack était `max-w-lg` (512 px) — trop étroite. Passée à `max-w-2xl`. Le formulaire passe de `w-[32rem]` à `w-full`, layout reorganisé en grille 3 colonnes (Fundamental / Difficulty / Price).
+- **ScenarioForm élargi** : La modal scenario était aussi `max-w-lg` alors que le formulaire fait 768 px. Corrigé en `max-w-5xl`, scroll vertical sur la page pour les longs formulaires.
+- **Map Overlay Editor** : Padding de la modal réduit (`p-6` → `p-4`), container avec `max-w-[96vw] max-h-[96vh] overflow-auto` pour utiliser tout l'espace écran.
+- **Pages compactes** : Réduction des paddings et tailles de titres sur Landing (`text-7xl` → `text-5xl`, `pt-16 pb-20` → `pt-10 pb-10`), Fundamentals (`text-5xl` → `text-3xl`, `space-y-14` → `space-y-8`), Premium (section marketing condensée de tall centré → 2 colonnes inline). Grilles de packs passées à 4 colonnes sur xl. Cartes packs `p-6` → `p-4`.
+- **Admin packs liste** : Images `h-40` → `h-28`, gap `gap-8` → `gap-4`, textes réduits.
+- **Fallback images sans ad-blocker** : Remplacement des `https://via.placeholder.com/300x150` (bloqués par les ad-blockers) par des `<div>` CSS avec dégradé sombre + label "No image".
+
+### 2. Corrections de Bugs
+
+- **React error #31** (Objects are not valid as a React child) : L'API `/api/packs/[id]` retournait `scenarios: Array<{id: string}>` (relation Prisma) après le spread `{ ...pack, scenarioIds: ... }`. Le champ n'était pas écrasé. Corrigé en ajoutant `scenarios: pack.scenarios.length` dans le formattedPack.
+- **Images 404** : `iem-rio-2026.jpg` corrigé en `iemrio2026.jpg` (nom réel sur disque). `pgl-major-2025.jpg` absent → `imageUrl` vidée dans `packs.json`.
+- **Mentions FACEIT supprimées** : "FACEIT difficulty" → "Adaptive difficulty" sur la landing. "Faceit Level" → "Insight Level" sur le profil.
+
+### 3. Background & Favicon
+
+- **Background unique** : Suppression du `bg-gradient-to-b from-gray-900 to-gray-800` de `layout.tsx`. Nouveau fond global dans `globals.css` : `#0d0f14` + radial-gradient bleu primaire au top + grille de points 28 px (CSS pur, `radial-gradient` sur 1 px). Donne un look professionnel type Linear/Vercel sans image externe.
+- **Community cards** : Ajout de `bg-no-repeat` pour éviter le tiling des images de fond dans les cartes.
+- **Favicon** : Deux itérations. Version finale : hexagone bleu primaire (#00a8e8) avec un inset sombre et un lettermark "I" en bleu — style badge esport.
+
+### 4. Mode Marathon (`/marathon`)
+
+Nouveau mode de jeu accessible depuis la Navbar (icône éclair entre Fundamentals et Premium).
+
+- **Page `/marathon`** : Machine d'état en 3 phases — Config → Loading → Playing.
+  - **Config** : Sélection des 8 fondamentaux (pills avec check, impossible de tout désélectionner), choix du nombre de questions (10 / 20 / 30 / 50), résumé live "X fundamentals · Y questions".
+  - **Loading** : Spinner pendant le fetch.
+  - **Playing** : Header compact "Marathon Mode · N questions · fondamentaux sélectionnés" + bouton "← New config". Utilise `ScenarioView` avec un pack synthétique `{ id: "marathon", difficulty: "intermediate" }`.
+- **API `/api/marathon`** : GET avec `?themes=decision,teamplay&count=20`. Requête Prisma sur les packs gratuits (`isPremium: false, isCommunity: false`) filtrés par theme. Collecte tous les scénarios, shuffle Fisher-Yates, slice(count). Mappe `videoUrl` → `video` pour compatibilité avec `ScenarioView`.
+
+### 5. Système ELO par Qualité de Réponse
+
+Remplacement de l'ancienne formule `delta = (scorePct - 50) * factor` (trop permissive, gains quasi assurés) par un système de delta **par réponse individuelle** :
+
+| Qualité | Delta base |
+|---------|-----------|
+| Perfect | +10 |
+| Excellent | +2 |
+| Good | −6 |
+| Blunder | −18 |
+
+Facteurs de difficulté : Beginner ×0.6 · Intermediate ×0.9 · Advanced ×1.3.
+
+- `ScenarioView.tsx` envoie désormais le breakdown `qualities: { perfect: N, excellent: N, good: N, blunder: N }` avec le POST score.
+- `score/route.ts` calcule `sum(PER_QUALITY[q] * count[q]) * factor`. Fallback sur ancienne formule (seuil 70%) si `qualities` absent.
+- Exemples intermédiaire : 4× Perfect = **+36** · 4× Excellent = **+7** · 4× Good = **−22** · 4× Blunder = **−65**. Il faut ~1 Perfect pour 2 Excellent pour être à l'équilibre.
+
 ## Avancement (Session 8 - 2026-04-22 12:30) — Système d'Image Dynamique & Upload
 
 ### Gestion des Assets (Images)

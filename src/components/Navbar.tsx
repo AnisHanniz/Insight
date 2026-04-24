@@ -28,6 +28,24 @@ export default function Navbar() {
             Fundamentals
           </Link>
           <Link
+            href="/marathon"
+            className="text-gray-300 hover:text-white transition flex items-center gap-1"
+          >
+            <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Marathon
+          </Link>
+          <Link
+            href="/bolt"
+            className="text-gray-300 hover:text-white transition flex items-center gap-1"
+          >
+            <svg className="w-3.5 h-3.5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Bolt
+          </Link>
+          <Link
             href="/premium"
             className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200 hover:from-yellow-300 hover:to-yellow-100 font-extrabold transition"
           >

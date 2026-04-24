@@ -64,6 +64,7 @@ export default function PackForm({
     }
   }, [pack]);
 
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
   ) => {
@@ -99,7 +100,7 @@ export default function PackForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5 w-[32rem] max-w-full">
+    <form onSubmit={handleSubmit} className="space-y-4 w-full">
       <div>
         <label className="block text-sm font-medium text-gray-300">Pack name</label>
         <input
@@ -112,9 +113,9 @@ export default function PackForm({
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-3 gap-3">
         <div>
-          <label className="block text-sm font-medium text-gray-300">Fundamental (theme)</label>
+          <label className="block text-sm font-medium text-gray-300">Fundamental</label>
           <select
             name="theme"
             value={formData.theme}
@@ -141,6 +142,18 @@ export default function PackForm({
             <option value="advanced">Advanced</option>
           </select>
         </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-300">Price</label>
+          <input
+            type="text"
+            name="price"
+            value={formData.price}
+            onChange={handleChange}
+            placeholder="Free or $4.99"
+            className="mt-1 block w-full p-2 rounded bg-gray-600 text-white border border-gray-500"
+            required
+          />
+        </div>
       </div>
 
       <div>
@@ -161,41 +174,13 @@ export default function PackForm({
           name="description"
           value={formData.description}
           onChange={handleChange}
-          rows={3}
+          rows={2}
           placeholder="What does this pack teach?"
           className="mt-1 block w-full p-2 rounded bg-gray-600 text-white border border-gray-500"
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-300">Tier</label>
-          <select
-            name="tier"
-            value={formData.tier}
-            onChange={handleChange}
-            className="mt-1 block w-full p-2 rounded bg-gray-600 text-white border border-gray-500"
-          >
-            <option value={1}>Tier 1</option>
-            <option value={2}>Tier 2</option>
-            <option value={3}>Tier 3</option>
-          </select>
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-300">Price</label>
-          <input
-            type="text"
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
-            placeholder="Free or $4.99"
-            className="mt-1 block w-full p-2 rounded bg-gray-600 text-white border border-gray-500"
-            required
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-3">
         <div>
           <label className="block text-sm font-medium text-gray-300">Tournament</label>
           <input

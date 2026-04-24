@@ -17,8 +17,11 @@ export default function UserForm({ user, onSave, onCancel }: { user?: any, onSav
   }, [user]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === "number" ? (value === "" ? 0 : parseInt(value, 10)) : value,
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {

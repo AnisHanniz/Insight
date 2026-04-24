@@ -8,6 +8,7 @@ import type { Scenario, OptionQuality } from "@/types/scenario";
 import type { Pack } from "@/types/pack";
 import { QUALITY, qualityOf } from "@/lib/themes";
 import MapOverlayRenderer from "@/components/MapOverlayRenderer";
+import AnimatedNumber from "@/components/AnimatedNumber";
 
 type Verdict = { scenarioId: string; quality: OptionQuality; score: number };
 
@@ -42,22 +43,24 @@ export default function ScenarioView({ scenarios, pack }: { scenarios: Scenario[
   useEffect(() => {
     if (done && session?.user?.id) {
       const scorePct = maxScore === 0 ? 0 : Math.round((score / maxScore) * 100);
+      const qualities = verdicts.reduce<Record<string, number>>((acc, v) => {
+        acc[v.quality] = (acc[v.quality] ?? 0) + 1;
+        return acc;
+      }, {});
       fetch(`/api/users/${session.user.id}/score`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           packId: pack.id,
           scorePct,
-          difficulty: pack.difficulty || "intermediate"
+          difficulty: pack.difficulty || "intermediate",
+          qualities,
         }),
       }).then(r => r.json()).then(data => {
-        if (data.delta !== undefined) {
-          setEloDelta(data.delta);
-          // Ideally update session as well, but requiring hard refresh might be simpler for now
-        }
+        if (data.delta !== undefined) setEloDelta(data.delta);
       }).catch(console.error);
     }
-  }, [done, session, maxScore, score, pack]);
+  }, [done, session, maxScore, score, pack, verdicts]);
 
   if (done || !current) {
     return <Summary verdicts={verdicts} scenarios={scenarios} score={score} maxScore={maxScore} eloDelta={eloDelta} />;
@@ -268,17 +271,19 @@ function Summary({
       <p className="text-gray-400 mt-2">Here&apos;s how you decided.</p>
 
       {eloDelta !== null && (
-        <div className={`mt-6 p-4 rounded-lg flex items-center justify-between border ${eloDelta > 0 ? 'bg-green-500/10 border-green-500/30' : 'bg-red-500/10 border-red-500/30'}`}>
+        <div className={`mt-6 p-4 rounded-xl border flex items-center justify-between ${eloDelta > 0 ? "bg-green-500/10 border-green-500/30" : "bg-red-500/10 border-red-500/30"}`}>
           <div className="font-extrabold text-lg">Rating Update</div>
-          <div className={`text-2xl font-black ${eloDelta > 0 ? 'text-green-400' : 'text-red-400'}`}>
-            {eloDelta > 0 ? '+' : ''}{eloDelta} ELO
+          <div className={`text-3xl font-black tabular-nums ${eloDelta > 0 ? "text-green-400" : "text-red-400"}`}>
+            <AnimatedNumber value={eloDelta} showSign duration={1200} />
+            <span className="text-lg ml-1">ELO</span>
           </div>
         </div>
       )}
 
       <div className="mt-8 bg-white/5 border border-white/10 rounded-xl p-8">
         <div className="flex items-baseline gap-3">
-          <span className="text-6xl font-extrabold text-primary">{pct}%</span>
+          <AnimatedNumber value={pct} className="text-6xl font-extrabold text-primary" duration={1000} />
+          <span className="text-3xl font-extrabold text-primary">%</span>
           <span className="text-gray-400">
             {score} / {maxScore} points
           </span>
@@ -298,7 +303,7 @@ function Summary({
                 <div className={`text-xs font-extrabold uppercase tracking-wider ${meta.text}`}>
                   {meta.label}
                 </div>
-                <div className="text-3xl font-extrabold">{counts[q] ?? 0}</div>
+                <AnimatedNumber value={counts[q] ?? 0} className="text-3xl font-extrabold" duration={800} />
               </div>
             );
           })}

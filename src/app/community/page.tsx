@@ -70,7 +70,7 @@ export default function CommunityBrowse() {
                 className="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl overflow-hidden transition block"
               >
                 <div
-                  className="h-32 bg-cover bg-center relative"
+                  className="h-32 bg-cover bg-center bg-no-repeat relative"
                   style={{
                     backgroundImage: p.imageUrl ? `url(${p.imageUrl})` : undefined,
                     backgroundColor: p.imageUrl ? undefined : themeColor + "22",

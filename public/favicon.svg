@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Hexagon background -->
+  <polygon points="16,1.5 28.5,8.75 28.5,23.25 16,30.5 3.5,23.25 3.5,8.75" fill="#00a8e8"/>
+  <!-- Darker inner hexagon for depth -->
+  <polygon points="16,4.5 26,10.25 26,21.75 16,27.5 6,21.75 6,10.25" fill="#003459"/>
+  <!-- Bold "I" mark -->
+  <!-- Top bar -->
+  <rect x="11" y="10" width="10" height="2.2" rx="1.1" fill="#00a8e8"/>
+  <!-- Stem -->
+  <rect x="14.8" y="12" width="2.4" height="8" rx="1.2" fill="#00a8e8"/>
+  <!-- Bottom bar -->
+  <rect x="11" y="19.8" width="10" height="2.2" rx="1.1" fill="#00a8e8"/>
+</svg>

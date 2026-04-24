@@ -20,6 +20,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
     // Include scenarioIds for backward compatibility
     const formattedPack = {
       ...pack,
+      scenarios: pack.scenarios.length,
       scenarioIds: pack.scenarios.map(s => s.id)
     };
 

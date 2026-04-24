@@ -381,12 +381,12 @@ export default function ScenarioForm({
 
       {overlayOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-2"
           onClick={(e) => {
             if (e.target === e.currentTarget) setOverlayOpen(false);
           }}
         >
-          <div className="bg-gray-800 border border-white/10 rounded-xl p-6 shadow-2xl">
+          <div className="bg-gray-800 border border-white/10 rounded-xl p-4 shadow-2xl max-w-[96vw] max-h-[96vh] overflow-auto">
             <MapOverlayEditor
               image={formData.image}
               overlay={formData.overlay}

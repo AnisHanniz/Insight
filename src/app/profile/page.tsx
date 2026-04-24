@@ -95,7 +95,7 @@ export default function ProfilePage() {
   const levelColor = eloLevel >= 8 ? 'bg-orange-500' : eloLevel >= 5 ? 'bg-yellow-500' : 'bg-gray-400';
 
   return (
-    <main className="min-h-screen bg-[#0d0f12] text-white pt-10 pb-20">
+    <main className="min-h-screen text-white pt-10 pb-20">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="relative rounded-2xl overflow-hidden mb-10 border border-white/5 bg-[#1a1c23]">
           <div className="h-48 bg-gradient-to-r from-blue-900/40 to-purple-900/40 relative">
@@ -160,7 +160,7 @@ export default function ProfilePage() {
 
             <div className="flex items-center gap-4 mb-2">
               <div className="text-center bg-black/40 px-6 py-3 rounded-xl border border-white/5">
-                <div className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Faceit Level</div>
+                <div className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Insight Level</div>
                 <div className={`w-10 h-10 mx-auto rounded-full flex items-center justify-center text-xl font-black ${levelColor} text-white shadow-lg`}>
                   {eloLevel}
                 </div>

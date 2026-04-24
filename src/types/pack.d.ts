@@ -18,7 +18,7 @@ export interface Pack {
   description?: string;
   difficulty?: "beginner" | "intermediate" | "advanced";
   scenarios: number;
-  tier: number;
+  tier?: number;
   price: string;
   imageUrl: string;
   scenarioIds?: string[];

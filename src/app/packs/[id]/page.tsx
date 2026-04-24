@@ -49,11 +49,8 @@ export default function PackDetailPage() {
             ← {t.name}
           </Link>
           <div className="flex items-center gap-2 mt-5">
-            <span className={`text-xs font-bold px-2.5 py-1 rounded ${t.badge}`}>
-              Tier {pack.tier}
-            </span>
             {pack.difficulty && (
-              <span className="text-xs font-bold px-2.5 py-1 rounded bg-white/10 text-gray-200 capitalize">
+              <span className={`text-xs font-bold px-2.5 py-1 rounded ${t.badge} capitalize`}>
                 {pack.difficulty}
               </span>
             )}

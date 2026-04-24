@@ -20,16 +20,15 @@ export default function FundamentalsPage() {
     filter === "all" ? freePacks : freePacks.filter((p) => p.theme === filter);
 
   return (
-    <main className="text-white container mx-auto px-6 py-12">
-      <header className="mb-10">
-        <h1 className="text-5xl font-extrabold">Fundamentals</h1>
-        <p className="text-gray-400 mt-3 max-w-2xl">
-          Free packs grouped by fundamental. Train your basics and test your decision making
-          on essential CS2 scenarios.
+    <main className="text-white container mx-auto px-6 py-8">
+      <header className="mb-6">
+        <h1 className="text-3xl font-extrabold">Fundamentals</h1>
+        <p className="text-gray-400 mt-1.5 max-w-2xl text-sm">
+          Free packs grouped by fundamental. Train your basics and test your decision making on essential CS2 scenarios.
         </p>
       </header>
 
-      <div className="flex flex-wrap gap-2 mb-10">
+      <div className="flex flex-wrap gap-2 mb-6">
         <button
           onClick={() => setFilter("all")}
           className={`px-4 py-2 rounded-full text-sm font-bold border transition ${
@@ -61,23 +60,23 @@ export default function FundamentalsPage() {
       </div>
 
       {filter === "all" ? (
-        <div className="space-y-14">
+        <div className="space-y-8">
           {THEME_ORDER.map((slug) => {
             const t = THEMES[slug];
             const group = freePacks.filter((p) => p.theme === slug);
             if (group.length === 0) return null;
             return (
               <section key={slug}>
-                <div className="flex items-center justify-between mb-5">
-                  <div className="flex items-center gap-3">
-                    <span className={`h-3 w-3 rounded-full ${t.dot}`} />
-                    <h2 className="text-2xl font-extrabold">{t.name}</h2>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className={`h-2.5 w-2.5 rounded-full ${t.dot}`} />
+                    <h2 className="text-lg font-extrabold">{t.name}</h2>
                   </div>
                   <Link
                     href={`/themes/${slug}`}
-                    className={`text-sm font-bold ${t.accent}`}
+                    className={`text-xs font-bold ${t.accent}`}
                   >
-                    Fundamental details →
+                    Details →
                   </Link>
                 </div>
                 <PackGrid packs={group} />
@@ -94,48 +93,49 @@ export default function FundamentalsPage() {
 
 function PackGrid({ packs }: { packs: Pack[] }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
       {packs.map((p) => {
         const t = THEMES[p.theme] ?? THEMES.training;
         return (
           <Link
             key={p.id}
             href={`/packs/${p.id}`}
-            className={`group relative overflow-hidden rounded-xl border border-white/10 bg-secondary/60 p-6 hover:border-white/25 transition`}
+            className={`group relative overflow-hidden rounded-xl border border-white/10 bg-secondary/60 p-4 hover:border-white/25 transition`}
           >
             {p.imageUrl && (
-              <div 
+              <div
                 className="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition bg-cover bg-center"
                 style={{ backgroundImage: `url(${p.imageUrl})` }}
               />
             )}
             <div className={`absolute inset-0 z-0 bg-gradient-to-br ${t.gradient} mix-blend-overlay opacity-60`} />
             <div className="relative z-10">
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex gap-2">
-                  <span className={`text-xs font-bold px-2.5 py-1 rounded ${t.badge}`}>
-                    Tier {p.tier}
-                  </span>
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex gap-1.5">
+                  {p.difficulty && (
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded ${t.badge}`}>
+                      {p.difficulty}
+                    </span>
+                  )}
                   {p.isPremium && (
-                    <span className="text-xs font-bold px-2.5 py-1 rounded bg-yellow-500/20 text-yellow-300 border border-yellow-500/30">
+                    <span className="text-xs font-bold px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300 border border-yellow-500/30">
                       PREMIUM
                     </span>
                   )}
                 </div>
-                <span className="text-sm font-bold text-gray-300">{p.price}</span>
+                <span className="text-xs font-bold text-gray-300">{p.price}</span>
               </div>
               {p.tournament && (
                 <div className="text-xs font-semibold text-gray-400 mb-1 uppercase tracking-wider">
                   {p.tournament}
                 </div>
               )}
-              <h3 className="text-xl font-extrabold leading-tight">{p.name}</h3>
+              <h3 className="text-base font-extrabold leading-tight">{p.name}</h3>
               {p.subtitle && (
-                <p className="text-gray-300 text-sm mt-2">{p.subtitle}</p>
+                <p className="text-gray-300 text-xs mt-1">{p.subtitle}</p>
               )}
-              <div className="flex items-center gap-3 mt-5 text-xs text-gray-400">
+              <div className="flex items-center gap-2 mt-3 text-xs text-gray-400">
                 <span>{p.scenarios} scenarios</span>
-                {p.difficulty && <span className="capitalize">· {p.difficulty}</span>}
               </div>
             </div>
           </Link>

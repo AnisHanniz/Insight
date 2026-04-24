@@ -10,6 +10,9 @@ const exo2 = Exo_2({ subsets: ["latin"], weight: ["400", "700", "800"] });
 export const metadata: Metadata = {
   title: "Insight",
   description: "Train your Counter-Strike decision making",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -19,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${exo2.className} bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100`}>
+      <body className={`${exo2.className} text-gray-100`}>
         <Providers>
           <Navbar />
           {/* The main content now has a bit of top padding to not be directly under the navbar */}

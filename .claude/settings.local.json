@@ -30,7 +30,12 @@
       "Bash(git -C /home/nad/iqcs remote -v)",
       "Bash(git -C /home/nad/iqcs log --oneline -5)",
       "Bash(npx prisma *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(npx next *)",
+      "WebSearch",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:unsplash.com)"
     ]
   }
 }

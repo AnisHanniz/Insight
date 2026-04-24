@@ -236,7 +236,7 @@
     "difficulty": "advanced",
     "scenarios": 3,
     "price": "$4.99",
-    "imageUrl": "/images/packs/iem-rio-2026.jpg",
+    "imageUrl": "/images/packs/iemrio2026.jpg",
     "scenarioIds": [
       "iem-rio-1",
       "iem-rio-2",
@@ -255,7 +255,7 @@
     "difficulty": "advanced",
     "scenarios": 3,
     "price": "$3.99",
-    "imageUrl": "/images/packs/pgl-major-2025.jpg",
+    "imageUrl": "",
     "scenarioIds": [
       "pgl-1",
       "pgl-2",
@@ -274,7 +274,7 @@
     "difficulty": "advanced",
     "scenarios": 5,
     "price": "Free",
-    "imageUrl": "/images/packs/pgl-major-2025.jpg",
+    "imageUrl": "",
     "scenarioIds": [
       "adv-vision-s1",
       "adv-vision-s2",

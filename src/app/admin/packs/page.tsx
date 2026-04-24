@@ -73,34 +73,35 @@ export default function ManagePacksPage() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {packs.map((pack) => (
-          <div key={pack.id} className="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-            <img src={pack.imageUrl || 'https://via.placeholder.com/300x150'} alt={pack.name} className="w-full h-40 object-cover"/>
-            <div className="p-6">
-              <h2 className="text-xl font-bold text-blue-400 mb-2">{pack.name}</h2>
-              <p className="text-gray-400 mb-4">{pack.scenarios} scenarios</p>
-              <div className="flex justify-between items-center mb-4">
-                <span className={`text-sm font-semibold px-3 py-1 rounded-full ${
-                  pack.tier === 1 ? "bg-yellow-500 text-gray-900" :
-                  pack.tier === 2 ? "bg-gray-500 text-white" :
-                  "bg-orange-700 text-white"
-                }`}>
-                  Tier {pack.tier}
-                </span>
-                <p className="text-lg font-bold">{pack.price}</p>
+          <div key={pack.id} className="bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+            {pack.imageUrl ? (
+              <img src={pack.imageUrl} alt={pack.name} className="w-full h-28 object-cover"/>
+            ) : (
+              <div className="w-full h-28 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
+                <span className="text-gray-500 text-xs uppercase tracking-widest font-bold">No image</span>
               </div>
-              <div className="flex flex-col space-y-2 mt-4">
+            )}
+            <div className="p-4">
+              <div className="flex items-start justify-between mb-1">
+                <h2 className="text-base font-bold text-blue-400 leading-tight">{pack.name}</h2>
+                {pack.isPremium && <span className="ml-2 shrink-0 text-xs font-bold px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300 border border-yellow-500/30">PREMIUM</span>}
+              </div>
+              <p className="text-gray-400 text-xs mb-3">
+                {pack.scenarios} scenarios · <span className="capitalize">{pack.difficulty ?? "intermediate"}</span> · {pack.price}
+              </p>
+              <div className="flex flex-col space-y-1.5">
                 <Link href={`/admin/packs/${pack.id}`} className="w-full">
-                  <button className="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-colors">
+                  <button className="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold py-2 px-4 rounded-lg transition-colors">
                     Manage Content
                   </button>
                 </Link>
                 <div className="flex space-x-2">
-                  <button onClick={() => handleOpenModal(pack)} className="flex-1 bg-white/5 hover:bg-blue-500/20 border border-white/10 hover:border-blue-500/50 text-blue-400 text-sm font-semibold py-2 px-4 rounded-lg transition-colors">
+                  <button onClick={() => handleOpenModal(pack)} className="flex-1 bg-white/5 hover:bg-blue-500/20 border border-white/10 hover:border-blue-500/50 text-blue-400 text-xs font-semibold py-1.5 px-4 rounded-lg transition-colors">
                     Edit
                   </button>
-                  <button onClick={() => handleDelete(pack.id)} className="flex-1 bg-white/5 hover:bg-red-500/20 border border-white/10 hover:border-red-500/50 text-red-400 text-sm font-semibold py-2 px-4 rounded-lg transition-colors">
+                  <button onClick={() => handleDelete(pack.id)} className="flex-1 bg-white/5 hover:bg-red-500/20 border border-white/10 hover:border-red-500/50 text-red-400 text-xs font-semibold py-1.5 px-4 rounded-lg transition-colors">
                     Delete
                   </button>
                 </div>
@@ -111,9 +112,9 @@ export default function ManagePacksPage() {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
-          <div className="bg-gray-700 p-8 rounded-lg shadow-2xl max-w-lg w-full">
-            <h2 className="text-2xl font-bold mb-6 text-white">{selectedPack ? "Edit Pack" : "Add New Pack"}</h2>
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 p-4">
+          <div className="bg-gray-700 p-6 rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+            <h2 className="text-xl font-bold mb-5 text-white">{selectedPack ? "Edit Pack" : "Add New Pack"}</h2>
             <PackForm pack={selectedPack} onSave={handleSave} onCancel={handleCloseModal} />
           </div>
         </div>

@@ -128,7 +128,13 @@ export default function ManagePackContentPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {scenarios.map((scenario) => (
           <div key={scenario.id} className="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-            <img src={scenario.image || 'https://via.placeholder.com/300x150'} alt={scenario.title} className="w-full h-40 object-cover"/>
+            {scenario.image ? (
+              <img src={scenario.image} alt={scenario.title} className="w-full h-40 object-cover"/>
+            ) : (
+              <div className="w-full h-40 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
+                <span className="text-gray-500 text-xs uppercase tracking-widest font-bold">No image</span>
+              </div>
+            )}
             <div className="p-6">
               <h2 className="text-xl font-bold text-blue-400 mb-2">{scenario.title}</h2>
               <p className="text-gray-400 mb-4">Map: {scenario.map}</p>
@@ -146,9 +152,9 @@ export default function ManagePackContentPage() {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
-          <div className="bg-gray-700 p-8 rounded-lg shadow-2xl max-w-lg w-full">
-            <h2 className="text-2xl font-bold mb-6 text-white">{selectedScenario ? "Edit Scenario" : "Add New Scenario"}</h2>
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-start z-50 p-4 overflow-y-auto">
+          <div className="bg-gray-700 p-6 rounded-xl shadow-2xl w-full max-w-5xl my-4">
+            <h2 className="text-xl font-bold mb-5 text-white">{selectedScenario ? "Edit Scenario" : "Add New Scenario"}</h2>
             <ScenarioForm scenario={selectedScenario} onSave={handleSaveScenario} onCancel={handleCloseModal} />
           </div>
         </div>

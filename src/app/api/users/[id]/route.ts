@@ -25,7 +25,7 @@ export async function PUT(request: Request, { params }: { params: { id: string }
         name: data.name,
         email: data.email,
         role: data.role,
-        elo: data.elo,
+        elo: data.elo !== undefined ? parseInt(String(data.elo), 10) : undefined,
         image: data.image,
         packsUnlocked: data.packsUnlocked,
         history: data.history
